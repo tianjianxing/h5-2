@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="1.css">
+	<style>
+		div{
+			color:red;
+			font-size:30px;
+		}
+		p{
+			border:1px solid red;
+		}
+	</style>
+	<style>
+		span{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1" class="d1">
+		ABCDE
+	</div>
+	<div id="box2" class="d1">
+		<p>abc</p>
+		<span>def</span>
+	</div>
+	<script>
+		var box1 = document.all.box1;
+		console.log(box1.innerHTML);
+		box1.innerHTML = "新设置的内容";
+		var box2 = document.all.box2;
+		console.log(box2.innerHTML);
+		box2.innerHTML = "<b>BBBB</b><a href=''>123</a>";
+
+		console.log(box1.textContent);
+		console.log(box2.textContent);
+
+		box1.textContent = "textContent设置的内容";
+		box2.textContent = "<i>IIIIII</i>";
+	</script>
+	<div id="box3" style="color:red;background-color:blue;">AAAAAAAA</div>
+	<script>
+		var box3 = document.all.box3;
+		console.log(box3.style);
+		box3.style.backgroundColor = "yellow";
+		box3.style.fontSize = "20px";
+
+		// box3.style = "color:orange;"
+		console.log(window.getComputedStyle(box3).border);
+	</script>
+
+	<script>
+		var sheets = document.styleSheets[1];
+		console.log(sheets);
+		var rules = sheets.cssRules || sheets.rules;
+		console.log(rules);
+		var rule = rules[0];
+		console.log(rule);
+		console.log(rule.style.color);
+		rule.style.color = "green";
+	</script>
+</body>
+</html>

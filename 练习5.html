@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			background-color: #00f;
+			padding:40px 0;
+			text-align: center;
+			min-width: 1000px;
+		}
+		/*CSS雪碧  CSS Sprite*/
+		.partener{
+			display:inline-block;
+			width: 200px;
+			background-color: #fff;
+			border-radius: 10px;
+			background-image: url(images/team-img.png);
+			background-repeat: no-repeat;
+			padding:180px 0 40px;
+			background-position: left 41px top 40px;
+			margin:0 15px;
+		}
+		.mike{
+			background-position: center top 40px;
+		}
+		.jimmy{
+			background-position: right 41px top 40px;
+		}
+
+		.share a{
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin:0 4px;
+			background-image: url(images/social-icons1.png);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.share a:first-child{
+			background-position: left;
+		}
+		.share a:last-child{
+			background-position: right;
+		}
+		.share a:hover{
+			background-image: url(images/social-iconshr.png);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="partener">
+			<h4>MELISSA DOE</h4>
+			<p>Director</p>
+			<div class="share">
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+			</div>
+		</div>
+		<div class="partener mike">
+		<h4>MIKE DOE</h4>
+			<p>Designer</p>
+			<div class="share">
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+			</div>
+		</div>
+		<div class="partener jimmy">
+			<h4>JIMMY DOE</h4>
+			<p>Coder</p>
+			<div class="share">
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

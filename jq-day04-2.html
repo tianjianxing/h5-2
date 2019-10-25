@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-3.4.1.js"></script>
+	<script src="../jquery.validate.js"></script>
+	<script src="../messages_zh.js"></script>
+</head>
+<body>
+	<form action="" id = "f1">
+		用户名：<input type="text" name="user" required minlength="3" maxlength="5"><br>
+		密码：<input type="password" name="pwd" required id="pwd"><br>
+		确认密码：<input type="password" name="repwd" equalTo="#pwd"><br>
+		<input type="email"><br>
+		<input type="submit">
+	</form>
+	<script>
+		$("#f1").validate();
+	</script>
+
+	<br>
+	<br><br>
+	<form action="" id="f2">
+		用户名：<input type="text" name="userName">
+		<br>
+		密码：<input type="password" name="pwd" id="pwd1">
+		<br>
+		确认密码：<input type="password" name="repwd">
+		<br>
+		email: <input type="email" name="email">
+		<br>
+		url: <input type="url" name="url">
+		<br>
+		<input type="submit">
+	</form>
+	<script>
+		$("#f2").validate({
+			rules:{
+				userName:"required",
+				pwd:"required",
+				repwd:{
+					equalTo:"#pwd1"
+				},
+				email:"required",
+				url:"required"
+			},
+			messages:{
+				userName:"这里必须写",
+				pwd:"把密码写上",
+				repwd:{
+					equalTo:"你是不是傻"
+				},
+				email:"让你填email!",
+				url:"填得不对"
+			}
+		})
+	</script>
+</body>
+</html>

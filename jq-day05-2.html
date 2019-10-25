@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+	<script src="jquery-3.4.1.js"></script>
+	<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+	<input type="button" value="打开对话框" class="btn">
+	<div class="box" title="这里是标题">
+		内容内容内容内容内容内容内容内容内容内容
+		<br>
+		<b>内容</b>
+		<input type="button" value="关闭按钮" class="closeBtn">
+	</div>
+	<script>
+		$(".box").dialog({
+			autoOpen:false,
+			buttons:{
+				"按钮一":function(){
+					console.log("按钮一");
+				},
+				"按钮二":function(){
+					console.log("按钮二");
+				}
+			},
+			draggable:false,
+			resizable:false,
+			modal:true
+		});
+
+		$(".btn").click(function(){
+			$(".box").dialog("open");
+		})
+		$(".closeBtn").click(function(){
+			$(".box").dialog("close");
+		})
+	</script>
+	<br>
+	<br>
+	<style>
+		.u1,.u2{
+			list-style-type: none;
+			padding: 0;
+		}
+		.u1 li{
+			border:1px solid red;
+		}
+		.u2 li{
+			border:1px solid blue;
+		}
+	</style>
+	<ul class="u1">
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+		<li>005</li>
+		<li>006</li>
+		<li>007</li>
+		<li>008</li>
+	</ul>
+	<br>
+	<ul class="u2">
+		<li>000001</li>
+		<li>000002</li>
+		<li>000003</li>
+		<li>000004</li>
+		<li>000005</li>
+	</ul>
+	<script>
+		$('.u1').sortable({
+			connectWith:".u2"
+		});
+		$('.u2').sortable({
+			connectWith:".u1"
+		});
+	</script>
+	<br>
+	<style>
+		.u3{
+			width: 300px;
+			height: 300px;
+			/*list-style-type: none;*/
+			padding:0;
+			list-style-position: inside;
+			border:1px solid blue;
+		}
+		.u3 li{
+			width: 32%;
+			height: 32%;
+			border:1px solid red;
+			float:left;
+		}
+	</style>
+	<ol class="u3">
+		<li>0001</li>
+		<li>0002</li>
+		<li>0003</li>
+		<li>0004</li>
+		<li>0005</li>
+		<li>0006</li>
+		<li>0007</li>
+		<li>0008</li>
+		<li>0009</li>
+	</ol>
+	<br>
+	<script>
+		$(".u3").sortable();
+	</script>
+	<br>
+	<style>
+		#d1{
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+		}
+	</style>
+	<div id="d1"></div>
+	<script>
+		$("#d1").draggable({
+			start:function(){
+				console.log("开始");
+			},
+			stop:function(){
+				console.log("结束");
+			},
+			drag:function(){
+				console.log("正在拖动");
+			},
+			axis:"y"
+		});
+		$("#d1").resizable();
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin:0;
+		}
+		.box{
+			width: 800px;
+			border:3px solid red;
+		}
+		.left{
+			width: 200px;
+			height: 230px;
+			background-color: #0f0;
+			float:left;
+		}
+		.right{
+			width: 220px;
+			height: 220px;
+			background-color: #00f;
+			/*float:right;*/
+			float:left;
+		}
+		.after{
+			width: 400px;
+			height: 200px;
+			background-color: #0ff;
+		}
+		.d3{
+			width: 350px;
+			height: 220px;
+			background-color: #999;
+			float:left;
+		}
+		.d4{
+			width: 150px;
+			height: 80px;
+			background-color: #333;
+			float:left;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="left"></div>
+		<div class="right"></div>
+		<div class="d3"></div>
+		<div class="d4"></div>
+	</div>
+	<div class="after"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<style>
+		.box1{
+			border:3px solid red;
+		}
+		.box1 span{
+			width: 100px;
+			height: 50px;
+			background-color: #0f0;
+			float:left;
+		}
+		.box1 b{
+			background-color: #0ff;
+		}
+	</style>
+	<div class="box1">
+		<span>SPAN</span>
+		<b>BBBB</b>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<style>
+		.box2{
+			border:3px solid red;
+		}
+		.bb{
+			width: 50px;
+			height: 50px;
+			background-color: #0f0;
+			float:right;
+		}
+		.bb1{
+			width: 150px;
+			background-color: #0ff;
+		}
+	</style>
+	<div class="box2">
+		<div class="bb1">
+			<div class="bb"></div>
+			革工南极圈革地黑暗lj工地鞯硒鼓aldf土革；革工南极圈革地黑暗lj工地鞯硒鼓aldf土革；革工南极圈革地黑暗lj工地鞯硒鼓aldf土革；革工南极圈革地黑暗lj工地鞯硒鼓aldf土革；
+		</div>
+	</div>
+	<br>
+	<style>
+		nav{
+			border:2px solid red;
+			height:20px;
+			/*overflow:hidden;*/
+		}
+		ul{
+			list-style-type:none;
+			padding:0;
+			margin:0;
+			float:right;
+		}
+		li{
+			width: 100px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			border:1px solid blue;
+			float:left;
+		}
+	</style>
+	<nav>
+		<ul>
+			<li><a href="">首页</a></li>
+			<li><a href="">产品</a></li>
+			<li><a href="">商城</a></li>
+			<li><a href="">关于</a></li>
+			<li><a href="">联系我们</a></li>
+		</ul>
+	</nav>
+	<br>
+	<br>
+	<br>
+	<style>
+		.box3{
+			border:2px solid red;
+		}
+		.bb3{
+			width: 200px;
+			height: 150px;
+			background-color: #0f0;
+			float:left;
+		}
+		.bb4{
+			width: 180px;
+			height: 180px;
+			background-color: #0ff;
+			float:right;
+		}
+		.clear{
+			clear:both;
+		}
+	</style>
+	<div class="box3">
+		<div class="bb3"></div>
+		<div class="bb4"></div>
+		<div class="clear"></div>
+	</div>
+	<br>
+	<!-- 
+		清除浮动塌陷：
+		 	1.给父元素添加固定的高
+		 	2.给父元素添加overflow:hidden
+		 	3.在父元素结尾添加一个块级元素，给这个块级元素添加clear:left/right/both
+		 	4.给父元素添加::after伪元素，在::after中设置｛content:"";display:block;clear:both｝
+	 -->
+	<br>
+	<br>
+	<style>
+		.box4{
+			border:2px solid red;
+		}
+		.bb5{
+			width: 200px;
+			height: 200px;
+			background-color: #0ff;
+			float:left;
+		}
+		.box4::after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+	</style>
+	<div class="box4">
+		<div class="bb5"></div>
+	</div>
+	<br>
+	<style>
+		s{
+			border:1px solid red;
+		}
+		s::after{
+			content:"000";
+		}
+	</style>
+	<s>ABCDE</s>
+	<br>
+</body>
+</html>

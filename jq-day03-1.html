@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="./jquery-3.4.1.js"></script>
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: #f00;
+			/*border-radius: 100px;*/
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="显示" class="showBtn">
+	<input type="button" value="隐藏" class="hideBtn">
+	<input type="button" value="切换" class="toggleBtn">
+	<div id="box"></div>
+	<script>
+		$(".showBtn").click(function(){
+			$("#box").show(1000,function(){
+				console.log("show");
+			});
+		})
+		$(".hideBtn").click(function(){
+			$("#box").hide('fast');
+		})
+		$(".toggleBtn").click(function(){
+			$("#box").toggle(1000);
+		})
+	</script>
+
+	<input type="button" value="显示" class="showBtn">
+	<input type="button" value="隐藏" class="hideBtn">
+	<input type="button" value="切换" class="toggleBtn">
+	<div id="box"></div>
+	<script>
+		$(".showBtn").click(function(){
+			$("#box").slideDown(1000,function(){
+				console.log("show");
+			});
+		})
+		$(".hideBtn").click(function(){
+			$("#box").slideUp(1000);
+		})
+		$(".toggleBtn").click(function(){
+			$("#box").slideToggle(1000);
+		})
+	</script>
+
+
+	<input type="button" value="显示" class="showBtn">
+	<input type="button" value="隐藏" class="hideBtn">
+	<input type="button" value="切换" class="toggleBtn">
+	<div id="box"></div>
+	<script>
+		$(".showBtn").click(function(){
+			$("#box").fadeIn(1000,function(){
+				console.log("show");
+			});
+		})
+		$(".hideBtn").click(function(){
+			$("#box").fadeOut(1000);
+		})
+		$(".toggleBtn").click(function(){
+			$("#box").fadeToggle(1000);
+		})
+	</script>
+
+	<style>
+		#box1{
+			width: 100px;
+			height: 100px;
+			background-color: #0f0;
+			margin:auto;
+		}
+	</style>
+	<br>
+	<br>
+	<br>
+	<input type="button"  value="按钮" class="btn1">
+	<div id="box1"></div>
+	<script>
+		$(".btn1").click(function(){
+			// $("#box1").animate({
+			// 	"width":"300px",
+			// 	"height":"200px"
+			// },1000);
+			$("#box1").animate({"width":"300px"},1000)
+					  .animate({"height":"200px"},1000)
+					  .animate({"border-radius":"100px"},1000)
+					  .fadeOut(1000);
+		})
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	111
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	222
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	333
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	444
+	<br>
+	<br>
+	<br>
+	<br>
+	<input type="button" value="回到顶部" class="toTop">
+	<script>
+		$(".toTop").click(function(){
+			$("html,body").animate({scrollTop:0},600);
+		})
+	</script>
+</body>
+</html>

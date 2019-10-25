@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+	<script>
+		jQuery.fun1 = function(){
+			console.log("fun1");
+		}
+		jQuery.fun1();
+		$.fun1();
+
+		$.extend({
+			fun2:function(){
+				console.log("fun2");
+			},
+			fun3:function(){
+				console.log("fun3");
+			}
+		})
+		$.fun2();
+		$.fun3();
+	</script>
+	<script>
+		$.myObj = {
+			fun4:function(){
+				console.log("fun4");
+			},
+			fun5:function(){
+				console.log("fun5");
+			}
+		}
+		$.myObj.fun4();
+	</script>
+	<script>
+		$.fn.fn1 = function(){
+			console.log("fn1");
+		}
+		$.fn.fn1();
+	</script>
+	<div id="d1"></div>
+	<br>
+	<div class="box1"></div>
+	<script>
+		$.fn.fn2 = function(){
+			console.log(this);
+			this.css({
+				"width":"200px",
+				"height":"200px",
+				"background-color":"red"
+			})
+		}
+		$("#d1").fn2();
+		$(".box1").fn2();
+	</script>
+	<br>
+	<div id="d2">ABC</div>
+	<br>
+	<div id="d3">CCCCCCC</div>
+	<script>
+		$.fn.fn3 = function(bg,fc){
+			this.css({
+				"background-color":bg,
+				"color":fc
+			})
+		}
+		$("#d2").fn3("red","blue");
+		$("#d3").fn3("orange","brown");
+	</script>
+	<br>
+	<div id="d4">ABCDE</div>
+	<script>
+		$.fn.fn4 = function(obj){
+			this.css({
+				"background-color":obj.backgroundColor,
+				"color":obj.color,
+				"height":obj.height,
+				"width":obj.width
+			})
+			if(obj.hasBorder){
+				this.css("border","5px solid blue");
+			}
+		}
+		$("#d4").fn4({
+			backgroundColor:"green",
+			color:"yellow",
+			// width:"200px",
+			// height:"100px",
+			// hasBorder:true
+		});
+	</script>
+	<script>
+		var obj1 = {
+			a:1,
+			b:2,
+			c:3
+		}
+		var obj2 = {
+			d:4,
+			a:5,
+			c:6
+		}
+		var res = $.extend(obj2,obj1);
+		console.log(res);
+	</script>
+	<br>
+	<div id="d5">ABCDE</div>
+	<script>
+		$.fn.fn5 = function(obj){
+			var def = {
+				width:"100px",
+				height:"100px",
+				color:"red",
+				backgroundColor:"green",
+				ff:function(){
+					console.log(this);
+				}
+			}
+			var res = $.extend(def,obj);
+			this.css({
+				"width":res.width,
+				"height":res.height,
+				"color":res.color,
+				"background-color":res.backgroundColor
+			})
+			res.ff();
+		}
+		$("#d5").fn5({
+			width:"200px",
+			color:"blue",
+			ff:function(){
+				console.log("这是一个方法");
+			}
+		});
+
+	</script>
+</body>
+</html>

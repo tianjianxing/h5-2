@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="d1">
+		<p id="p1">
+			<a href="">aaa</a>
+			<b>bbb</b>
+			<i>IIII</i>
+		</p>
+	</div>
+	<script>
+		var p1 = document.getElementById("p1");
+		console.log(p1);
+		console.log(p1.parentElement);
+		console.log(p1.children);
+		console.log(p1.firstElementChild.nextElementSibling);
+		console.log(p1.lastElementChild.previousElementSibling);
+	</script>
+	<div id="d2">
+		<p class="p2">
+			<a href=""></a>
+			<b name="n1"></b>
+		</p>
+		<p class="p3">
+			<s name="n1"></s>
+		</p>
+		<div class="d3"><b></b></div>
+	</div>
+	<script>
+		var d2 = document.getElementById('d2');
+		console.log(d2);
+		var pp = document.getElementsByTagName('p');
+		console.log(pp);
+		var pp1 = d2.getElementsByTagName('p');
+		console.log(pp1);
+		var nn = document.getElementsByName('n1');
+		console.log(nn);
+
+		var cc = document.getElementsByClassName('p2');
+		console.log(cc);
+
+		var q1 = document.querySelector(".p2 b");
+		console.log(q1);
+
+		var q2 = document.querySelectorAll("#d2 b");
+		console.log(q2);
+
+		var all = document.all;
+		console.log(all);
+
+		var dd2 = document.all["d2"];//同 document.all.d2
+		console.log(dd2);
+
+		console.log(document.head);
+		console.log(document.title);
+		document.title="我设置的文字";
+		console.log(document.body);
+	</script>
+</body>
+</html>

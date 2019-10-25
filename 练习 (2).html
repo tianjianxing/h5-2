@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script>
+		var n1 = parseFloat(prompt("请输入第一个数"));
+		var n2 = parseFloat(prompt("请输入第二个数"));
+		var n3 = parseFloat(prompt("请输入第三个数"));
+		var res = n1>n2 ? (n1>n3?n1:n3) : (n2>n3?n2:n3);
+		console.log(res);
+	</script> -->
+
+	<!-- <script>
+		var year = parseInt(prompt("请输入年份"));
+		//能被4整除但同时不能被100整除，或能被400整除的
+		if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+			console.log("闰年");
+		}else{
+			console.log("平年");
+		}
+	</script> -->
+
+	<!-- <script>
+		var price = parseFloat(prompt("请输入单价"));
+		var count = parseInt(prompt("请输入数量"));
+		var total = price * count;
+		if(total > 1000){
+			console.log("宝马一辆");
+		}else if(total > 100){
+			console.log(total*0.8);
+		}
+	</script> -->
+
+	<!-- <script>
+		var salary = parseFloat(prompt("请输入薪资"));
+		if(salary > 15000){
+			console.log("土豪");
+		}else if(salary > 8000){
+			console.log("白领");
+		}else if(salary > 5000){
+			console.log("小康生活");
+		}else if(salary > 3000){
+			console.log("工薪阶层");
+		}else{
+			console.log("吃低保");
+		}
+	</script> -->
+
+	<!-- <script>
+		var planA,planB,planC;
+		var holdTime = parseInt(prompt("请输入通话时长"));
+		if(holdTime <= 100){
+			planA = 50;
+			planB = 50;
+		}else{
+			planA = 50 + (holdTime - 100);
+			if(planA > 200){
+				planA = 200;
+			}
+			planB = 50 + (holdTime - 100) * 0.85;
+		}
+		planC = holdTime * 0.75;
+
+		if(planA > planB){
+			if(planB > planC){
+				console.log("C");
+			}else{
+				console.log("B");
+			}
+		}else{
+			if(planA > planC){
+				console.log("C");
+			}else{
+				console.log("A");
+			}
+		}
+	</script> -->
+
+	<!-- <script>
+		var hours = parseInt(prompt("输入小时"));
+		var minutes = parseInt(prompt("输入分钟"));
+		if(hours>=0 && hours<10){
+			if(minutes>=0 && minutes<10){
+				console.log("0"+hours+":0"+minutes);
+			}else if(minutes>=10 && minutes<60){
+				console.log("0"+hours+":"+minutes);
+			}else{
+				console.log("输入错误");
+			}
+		}else if(hours>=10 && hours<=23){
+			if(minutes>=0 && minutes<10){
+				console.log(hours+":0"+minutes);
+			}else if(minutes>=10 && minutes<60){
+				console.log(hours+":"+minutes);
+			}else{
+				console.log("输入错误");
+			}
+		}else{
+			console.log("输入错误");
+		}
+	</script> -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str = "asabde13asd21435bd";
+		var obj = {};
+		for(var i = 0;i < str.length;i++){
+			var char = str[i];
+			// if(char in obj)
+			// if(obj.hasOwnProperty(char))
+			if(obj[char]){
+				obj[char]++;
+			}else{
+				obj[char] = 1;
+			}
+		}
+		console.log(obj);
+
+
+		var str1 = str.split("").sort().join("");
+		var index = 0,obj1 = {};
+		while(index<str1.length){
+			var c = str1[index];
+			var lastIndex = str1.lastIndexOf(c);
+			var count = lastIndex - index + 1;
+			obj1[c] = count;
+			index = lastIndex + 1;
+		}
+		console.log(obj1);
+	</script>
+</body>
+</html>

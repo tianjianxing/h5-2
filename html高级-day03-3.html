@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" draggable="true"></div>
+	<script>
+		$(".box").on('dragstart',function(){
+			console.log("dragstart");
+		}).on('drag',function(){
+			console.log("drag");
+		}).on('dragend',function(){
+			console.log("dragend");
+		})
+	</script>
+	<style>
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: #0f0;
+			position: absolute;
+		}
+	</style>
+	<div class="box1" draggable="true"></div>
+	<script>
+		var offsetX,offsetY;
+		$(".box1").on('dragstart',function(e){
+			offsetX = e.offsetX;
+			offsetY = e.offsetY;
+			// console.log(offsetX,offsetY);
+		}).on('drag dragend',function(e){
+			// console.log(e);
+			var x = e.clientX,
+				y = e.clientY;
+			// console.log(x,y);
+			$(this).css({
+				'top':y - offsetY + 'px',
+				'left':x - offsetX + 'px'
+			})
+		})
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<style>
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: #00f;
+		}
+		.box3{
+			width: 300px;
+			height: 300px;
+			border:20px solid red;
+		}
+	</style>
+	<div class="box2" draggable="true"></div>
+	<br>
+	<br>
+	<div class="box3"></div>
+	<br>
+	<script>
+		$(".box3").on('dragenter',function(){
+			console.log('dragenter');
+		}).on('dragleave',function(){
+			console.log('dragleave');
+		}).on('dragover',function(e){
+			e.preventDefault();
+			console.log('dragover');
+		}).on('drop',function(){
+			console.log('drop');
+		})
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			border:2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="800px" height="800px"></canvas>
+	<script>
+		var c1 = document.querySelector('canvas');
+		var ctx = c1.getContext('2d');
+
+		var rg = ctx.createRadialGradient(400,400,0,500,500,200);
+		rg.addColorStop(0,'red');
+		// rg.addColorStop(.5,'yellow');
+		rg.addColorStop(1,'blue');
+
+		ctx.fillStyle = rg;
+		ctx.fillRect(100,100,600,600);
+	</script>
+	<canvas width="800px" height="800px" class="c2"></canvas>
+	<script>
+		var c2 = document.querySelector('.c2');
+		var ctx2 = c2.getContext('2d');
+
+		ctx2.font = "40px 微软雅黑";
+		ctx2.textAlign = "right";
+		ctx2.textBaseline = "top";
+		ctx2.strokeStyle = "red";
+		ctx2.fillStyle = rg;
+		ctx2.strokeText("this Is ABC",400,100);
+		ctx2.fillText("ABC is abc",400,200);
+
+		ctx2.shadowColor = "orange";
+		ctx2.shadowOffsetX = 0;
+		ctx2.shadowOffsetY = 0;
+		ctx2.shadowBlur = 20;
+
+		ctx2.fillRect(200,300,100,100);
+	</script>
+	<canvas class="c3" width="800px" height="800px"></canvas>
+	<script>
+		var c3 = document.querySelector('.c3');
+		var ctx3 = c3.getContext('2d');
+
+		ctx3.beginPath();
+		ctx3.moveTo(100,100);
+		ctx3.lineTo(200,100);
+		ctx3.lineTo(300,200);
+		// ctx3.lineTo(400,200);
+		// ctx3.lineTo(300,500);
+		// ctx3.closePath();
+
+		ctx3.fill();
+
+		ctx3.rect(100,600,100,150);
+		ctx3.lineTo(300,700);
+		ctx3.lineTo(200,600);
+		ctx3.lineTo(100,700);
+		ctx3.stroke();
+	</script>
+</body>
+</html>

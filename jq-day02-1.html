@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			console.log("2");
+		}
+		$(document).ready(function(){
+
+		})
+		$().ready(function(){
+
+		})
+		$(function(){
+			console.log("ready");
+		})
+	</script>
+	<script>
+		console.log("1");
+	</script>
+
+	<input type="button" value="按钮1" id="btn1">
+	<script>
+		$("#btn1").bind('click',function(){
+			console.log("btn1");
+		})
+		$("#btn1").on('click',function(){
+			console.log("on");
+		})
+	</script>
+	<div id="box">
+		<input type="button" value="111">
+		<input type="button" value="222">
+		<input type="button" value="333">
+		<input type="button" value="444">
+	</div>
+	<script>
+		$("#box").on('click','input',function(event){
+			console.log(event.target);
+		})
+	</script>
+	<input type="button" value="按钮2" id="btn2">
+	<script>
+		$("#btn2").on('click mouseover',function(){
+			console.log("aaaa");
+		})
+		// $("#btn2").on("click",function(){
+		// 	console.log("click");
+		// }).on("click",function(){
+		// 	console.log("mouseover");
+		// })
+	</script>
+	<input type="button" value="按钮3" id="btn3">
+	<script>
+		$("#btn3").click(function(){
+			console.log("bbbb");
+		})
+	</script>
+	<input type="text" id="t1">
+	<script>
+		$("#t1").on('input',function(){
+			console.log($(this).val());
+		})
+	</script>
+	<input type="button" value="按钮4" id="btn4">
+	<script>
+		$("#btn4").one('click',function(){
+			console.log("one");
+		})
+	</script>
+
+	<input type="button" value="按钮5" id="btn5">
+	<script>
+		var count = 0;
+		$("#btn5").bind('click',function(){
+			console.log('btn5');
+			if(count >= 5){
+				$("#btn5").unbind('click');
+			}
+			count++;
+		})
+	</script>
+	<input type="button" value="按钮6" id="btn6">
+	<script>
+		$("#btn6").on('click',function(){
+			console.log('btn6');
+		})
+		$("#btn6").off('click');
+	</script>
+
+	<input type="button" value="按钮7" id="btn7">
+	<script>
+		$("#btn7").on('click',function(){
+			// console.log($(this));
+			// var e = window.event || arguments[0];
+			// var srcEle = e.target || e.srcElement;
+			console.log(event);
+		})
+	</script>
+
+
+	<input type="button" value="获取数据" id="getData">
+	<script>
+		$("#getData").click(function(){
+			console.log("一些数据");
+		})
+		$("#getData").trigger('click');
+		$("#getData").click();
+	</script>
+</body> 
+</html>

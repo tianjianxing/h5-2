@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.d1 p{
+			color:red;
+		}
+		.d1 b{
+			color:blue;
+		}
+		.d1 .i1{
+			color:orange;
+		}
+
+		.d2 > span{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div class="d2">
+		<p>PPPPPP <span>SSSSSSS</span></p>
+		<span>SPAN</span>
+	</div>
+	<div class="d1">
+		<p>
+			pppp2222
+			<b>BBBBBB</b>
+		</p>
+		<b>B2222 <i class="i1">iiiii</i></b>
+	</div>
+
+	<style>
+		.d3 > p b{
+			color:blue;
+		}
+	</style>
+	<div class="d3">
+		<div>
+			<p>
+				<b>b1</b>
+			</p>
+		</div>
+		<p>
+			<b>b2</b>
+		</p>
+	</div>
+</body>
+</html>

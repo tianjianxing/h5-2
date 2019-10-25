@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str = "Hello World";
+		var patt = /world/i;
+		document.write(str.match(patt));
+
+		document.write("<br>");
+
+		var str1 = "Is this all there is?";
+		var patt1 = /is/ig;
+		document.write(str1.match(patt1));
+		document.write("<br>");
+
+		var str2 = "Is this all there is?";
+		var patt2 = /[abcfg]/g;
+		document.write(str2.match(patt2));
+
+		document.write("<br>");
+
+		var str3 = "That's hot hoot!";
+		var patt3 = /h.t/g;
+		document.write(str3.match(patt3));
+
+		document.write("<br>");
+
+		var str4 = "Give _ 100%!";
+		var patt4 = /\s/g;
+		document.write(str4.match(patt4));
+
+		var str5 = "Is this all \n there is?";
+		var patt5 = /\n/g;
+		console.log(str5.search(patt5));
+		str5 = str5.replace(patt5,"N");
+		console.log(str5);
+
+	</script>
+</body>
+</html>

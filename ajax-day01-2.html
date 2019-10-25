@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				console.log(xhr.responseText);
+			}
+		}
+		// xhr.open('get','https://www.apiopen.top/weatherApi?city=德州');
+		// xhr.send(null);
+		xhr.open('post','https://www.apiopen.top/weatherApi');
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=utf-8");
+		xhr.send('city=德州');
+		// xhr.send('{"city":"德州"}');
+	</script>
+	<script>
+		var c1 = "abc",
+			c2 = "a&b",
+			c3 = "a=b";
+		// xhr.send("c1="+c1+"&c2="+c2+"&c3="+c3);
+		var str = "c1=abc&c2=a&b&c3=a=b";
+		var c11 = encodeURIComponent(c1);
+		var c22 = encodeURIComponent(c2);
+		var c33 = encodeURIComponent(c3);
+		console.log(c11);
+		console.log(c22);
+		console.log(c33);
+		var str1 = "c1=abc&c2=a%26b&c3=a%3Db";
+
+	</script>
+	<script>
+		//http://route.showapi.com/341-2?showapi_appid=38010&showapi_sign=3cfdb251b248451792b7d99fd9d05fdc
+
+		var xhr1 = new XMLHttpRequest();
+		xhr1.onreadystatechange = function(){
+			if(xhr1.readyState == 4){
+				console.log(xhr1.responseText);
+			}
+		}
+		xhr1.open('post','http://route.showapi.com/341-2');
+		xhr1.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=utf-8");
+		xhr1.send('showapi_appid=38010&showapi_sign=3cfdb251b248451792b7d99fd9d05fdc');
+
+	</script>
+</body>
+</html>

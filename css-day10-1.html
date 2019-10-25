@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 400px;
+			height: 300px;
+			border:2px solid red;
+			display:flex;
+			flex-direction:column-reverse;
+		}
+		.box div{
+			width: 100px;
+			border:2px solid blue;
+		}
+
+		.box1{
+			width: 400px;
+			height: 300px;
+			border:2px solid red;
+			display:flex;
+			/*flex-direction:column;
+			flex-wrap:wrap-reverse;*/
+			flex-flow: column wrap-reverse;
+		}
+		.box1 div{
+			width: 100px;
+			height:100px;
+			border:2px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="d1">001</div>
+		<div class="d2">002</div>
+		<div class="d3">003</div>
+		<div class="d4">004</div>
+		<div class="d5">005</div>
+		<div class="d6">006</div>
+	</div>
+	<br>
+	<div class="box1">
+		<div class="d1">001</div>
+		<div class="d2">002</div>
+		<div class="d3">003</div>
+		<div class="d4">004</div>
+		<div class="d5">005</div>
+		<div class="d6">006</div>
+	</div>
+	<br>
+	<style>
+		.box2{
+			width: 400px;
+			height: 300px;
+			border:2px solid red;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: space-around;
+		}
+		.box2 div{
+			width: 100px;
+			height:100px;
+			border:2px solid blue;
+		}
+	</style>
+	<div class="box2">
+		<div class="d1">001</div>
+		<div class="d2">002</div>
+		<div class="d3">003</div>
+		<div class="d4">004</div>
+		<div class="d5">005</div>
+		<div class="d6" style="visibility: hidden;">006</div>
+	</div>
+	<br>
+	<style>
+		.box3{
+			width: 400px;
+			height: 300px;
+			border:2px solid red;
+			display:flex;
+			align-items:baseline;
+		}
+		.box3 div{
+			width: 100px;
+			height:100px;
+			border:2px solid blue;
+		}
+		.box3 .d2{
+			height: 130px;
+			font-size:60px;
+		}
+		.box3 .d3{
+			height: 80px;
+		}
+	</style>
+	<div class="box3">
+		<div class="d1">001</div>
+		<div class="d2">002</div>
+		<div class="d3">003</div>
+	</div>
+	<br>
+	<style>
+		.box4{
+			width: 400px;
+			height: 300px;
+			border:2px solid red;
+			display:flex;
+			flex-wrap:wrap;
+			/*flex-direction:column;*/
+			justify-content: space-around;
+			align-content: space-around;
+		}
+		.box4 div{
+			width: 100px;
+			height:60px;
+			border:2px solid blue;
+			text-align: center;
+		}
+	</style>
+	<div class="box4">
+		<div class="d1">001</div>
+		<div class="d2">002</div>
+		<div class="d3">003</div>
+		<div class="d4">004</div>
+		<div class="d5">005</div>
+		<div class="d6">006</div>
+	</div>
+	<br>
+	<style>
+		.box5{
+			width: 200px;
+			height: 200px;
+			border:2px solid red;
+			display:flex;
+			justify-content: center;
+			align-items:center;
+		}
+		.box55{
+			width: 120px;
+			height: 60px;
+			background-color: #00f;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+	<div class="box5">
+		<div class="box55">
+			ABCa中革asd发地asdf木夺
+		</div>
+	</div>
+</body>
+</html>

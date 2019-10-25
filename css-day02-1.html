@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		[class]{
+			color:red;
+		}
+		[name="n1"]{
+			background-color: blue;
+		}
+		[name^="n"]{
+			font-size:30px;
+		}
+		[name$='1']{
+			border:3px solid orange;
+		}
+		[name*="n"]{
+			outline:5px dotted pink;
+		}
+
+
+		a:link{
+			color:red;
+		}
+		a:visited{
+			color:orange;
+		}
+		a:hover{
+			color:blue;
+		}
+		a:active{
+			color:green;
+		}
+		p:hover{
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="d1" name="n1">aaaaaa</div>
+	<span class="d1 d2" name="sn1">bbbb</span>
+	<p class="d2" name="n2">ccccc</p>
+	<b>dddddd</b>
+	<br>
+	<a href="http://www.tmall.com/">天猫</a>
+	<a href="http://www.douyu.com/">斗鱼</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<style>
+		ul li:first-child{
+			color:red;
+		}
+		ul :last-child{
+			color:blue;
+		}
+		ul :only-child{
+			color:green;
+		}
+	</style>
+	<ul>
+		<li>001</li>
+		<li>002
+			<b>BBBB
+				<i>IIIII</i>
+			</b>
+			<u>UUUU</u>
+		</li>
+		<li>003</li>
+		<li>004
+			<s>SSSS</s>
+		</li>
+		<li>005</li>
+		<li>006</li>
+		<li>007</li>
+		<li>008</li>
+		<li>009</li>
+		<li>010</li>
+	</ul>
+	<br>
+	<br>
+	<style>
+		/*ol li:nth-child(3){
+			color:red;
+		}
+		ol li:nth-child(5){
+			color:blue;
+		}*/
+
+		ol li:nth-child(odd){
+			color:red;
+		}
+		ol li:nth-child(even){
+			color:blue;
+		}
+		ol li:nth-last-child(3){
+			background-color: orange;
+		}
+	</style>
+	<ol>
+		<li>0001</li>
+		<li>0002</li>
+		<li>0003</li>
+		<li>0004</li>
+		<li>0005</li>
+		<li>0006</li>
+		<li>0007</li>
+		<li>0008</li>
+		<li>0009</li>
+		<li>0010</li>
+	</ol>
+	<br>
+	<br>
+	<br>
+	<style>
+		.f1 :enabled{
+			background-color: orange;
+		}
+		.f1 :disabled{
+			color:green;
+		}
+		.f1 :checked{
+			width: 40px;
+			height:40px;
+		}
+	</style>
+	<form action="" class="f1">
+		<input type="text">
+		<br>
+		<input type="password">
+		<br>
+		<input type="button" value="按钮1" disabled="">
+		<br>
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<br>
+		<input type="radio" name="sex">男
+		<input type="radio" name="sex">女
+		<br>
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<br>
+		<input type="submit">
+	</form>
+	<br>
+	<br>
+	<style>
+		.f2 :valid{
+			border:2px solid green;
+		}
+		.f2 :invalid{
+			border:2px solid red;
+		}
+	</style>
+	<form action="" class="f2">
+		<input type="text" required>
+		<br>
+		<input type="password" required>
+		<br>
+		<input type="email">
+		<br>
+		<input type="submit">
+	</form>
+	<br>
+	<style>
+		.box b:not(.bb){
+			color:black;
+			background-color: red;
+		}
+	</style>
+	<div class="box">
+		<b>001</b>
+		<b>002</b>
+		<b class="bb">003</b>
+		<b>004</b>
+		<b>005</b>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

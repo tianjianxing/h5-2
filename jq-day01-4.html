@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+	<style>
+		.s1{
+			border:2px solid brown;
+		}
+		.abc{
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" class="abc">ABC</div>
+	<input type="button" value="切换class" class="btn1">
+	<script>
+		$("#box").attr('style','color:red;background-color:blue;');
+		$("#box").addClass("s1");
+		$("#box").removeClass("abc");
+		
+		$(".btn1").click(function(){
+			$("#box").toggleClass("abc");
+			console.log($("#box").hasClass("abc"));
+		})
+
+		console.log($("#box").css("border"));
+		$("#box").css("font-size","30px");
+	</script>
+	<div id="box1">2222222</div>
+	<script>
+		$("#box1").css({
+			"color":"red",
+			"border":"2px solid blue",
+			"font-size":"20px",
+			"width":"200px"
+		});
+	</script>
+	<div id="box2">
+		<p>ppp
+			<i>iiii</i>
+		</p>
+		<b>bbb</b>
+		<s>ssss</s>
+		<i>i2</i>
+	</div>
+	<script>
+		console.log($("#box2").children("p"));
+		console.log($("#box2 p").next("b"));
+		console.log($("#box2 b").siblings());
+		console.log($("#box2").find("i"));
+		var box2 = $("#box2");
+		box2.css("border","2px solid red");
+		box2.find("i").css("color","blue");
+		console.log(box2.parent());
+	</script>
+	<div id="box3">
+		<div class="aaa">
+			<p>asdfaf
+				<b>;alkj;lkj</b>
+			</p>
+			<div class="aaa">
+				<p>
+					<i>nnnn</i>
+				</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		var ii = $("#box3 i");
+		console.log(ii.parent().parent());
+		console.log(ii.closest('.aaa'));
+	</script>
+</body>
+</html>

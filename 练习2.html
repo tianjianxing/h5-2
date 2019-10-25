@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+		.c2{
+			border: 1px solid blue;
+		}
+		p i{
+			color: blue;
+		}
+		.c3{
+			border: 1px solid brown;
+		}
+		.c3 a{
+			background: green;
+		}
+		#i1{
+			color: blue;
+		}
+		.c4{
+			background-color:grey;
+		}
+		h2{
+			color: red;
+		}
+		#i2{
+			color: orange;
+		}
+		#i3{
+			color: blue;
+		}
+		#i4{
+			color: green;
+		}
+		#i5{
+			color: red;
+		}
+		.c5{
+			border: 1px solid green;
+		}
+		.c5 li{
+			border: 1px solid blue;
+		}
+		.c5 li a{
+			color: orange;
+		}
+		#i7{
+			background-color: pink;
+		}
+
+	</style>
+	<link rel="stylesheet" href="111.css">
+</head>
+<body >
+
+
+	<div class="c1"><!--设置：border:1px solid red;使用外部样式表-->
+		<div>
+			<i>LOGO</i><!--logo为红色，使用外部样式表-->
+		</div>
+		<div><!--设置：border:1px solid blue;使用内联样式表-->
+			<input class="c2" type="text" placeholder="请输入内容"><!--设置提示信息：“请输入内容”-->
+			<input type="button" value="搜索">
+		</div>
+		<div>
+			<p>联系电话：<i>400-999-9999</i></p><!--i元素文本颜色：blue，使用内部样式表-->
+		</div>
+		<div class="c3"><!--div设置：border:1px solid brown;里面所有的a元素背景颜色green;‘关于’文本颜色:blue,使用内部样式表-->
+			<a href="">首页</a> | 
+			<a href="">首页</a> | 
+			<a id="i1" href="">关于</a> | 
+			<a href="">首页</a> | 
+			<a href="">首页</a> 
+		</div>
+	</div>
+	<div class="c4"><!--设置：background-color:gray;-->
+		<div>
+			<h2>第一部分</h2><!--设置文本颜色：red;使用内部样式表-->
+			<p id="i2">这是一小段文字</p><!--设置文本颜色：orange;使用内部样式表-->
+			<div>
+				<ul>
+					<li><a href="">111</a></li>
+					<li><a href="">222</a></li>
+					<li><a href="">333</a></li>
+					<li><a href="">444</a></li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<h2>第二部分</h2><!--设置文本颜色：red;使用内部样式表-->
+			<p id="i2">这是一小段文字</p><!--设置文本颜色：orange;使用内部样式表-->
+			<div>
+				<table><!-- 表头部分文本颜色blue,每个人的姓名为green,爱好为red(本要求使用内部样式表) -->
+					<tr id="i3">
+						<th>姓名</th>
+						<th>性别</th>
+						<th>年龄</th>
+						<th>爱好</th>
+					</tr>
+					<tr>
+						<td id="i4">张三</td>
+						<td>男</td>
+						<td>22</td>
+						<td id="i5">游戏</td>
+					</tr>
+					<tr>
+						<td id="i4">李四</td>
+						<td>女</td>
+						<td>23</td>
+						<td id="i5">逛街</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div>
+			<h2>第三部分</h2><!--设置文本颜色：red;使用内部样式表-->
+			<p id="i2">这是一小段文字</p><!--设置文本颜色：orange;使用内部样式表-->
+			<div class="c5"><!--div设置：border:1px solid green;里面所有li设置：border:1px solid blue;a元素文本颜色：orange;使用内部样式表-->
+				<ul>
+					<li><a href="">111</a></li>
+					<li><a href="">222</a></li>
+					<li><a id="i7" href="">333</a></li><!--此li中的a元素设置:background-color:pink;使用内部样式表-->
+					<li><a href="">444</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

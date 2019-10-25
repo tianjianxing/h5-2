@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		console.log(navigator.appCodeName);
+		console.log(navigator.appName);
+		console.log(navigator.appVersion);
+		console.log(navigator.language);
+		console.log(navigator);
+	</script>
+	<script>
+		console.log(screen.width);
+		console.log(screen.height);
+	</script>
+	<a href="1.html">111</a>
+	<a href="2.html">222</a>
+	<input type="button" value="open" onclick="fun1()">
+	<br>
+	<input type="button" value="back" onclick="fun2()">
+	<input type="button" value="forward" onclick="fun3()">
+	<script>
+		console.log(history.length);
+		function fun1(){
+			open("3.html","_self");
+		}
+		function fun2(){
+			history.back();
+		}
+		function fun3(){
+			history.forward();
+		}
+	</script>
+	<br>
+	<a href="#m1">m1</a>
+	<a href="#m2">m2</a>
+	<a href="#m3">m3</a>
+
+	<br>
+	<input type="button" value="getHash" onclick="fun4()">
+	<script>
+		function fun4(){
+			console.log(location.hash);
+			// location.hash = "#m3";
+			var d1 = document.querySelector(location.hash);
+			d1.style.color= "red";
+		}
+		console.log(location.host);
+		console.log(location.href);
+		// location.href="http://www.baidu.com/";
+		console.log(location.pathname);
+		// location.reload();
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="m1">1111111</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br><div id="m2">22222</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="m3">333333</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

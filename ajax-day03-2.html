@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var person = {
+			head:[
+				{
+					hair:"black"
+				},
+				{
+					eyes:{
+						color:"black",
+						count:2
+					}
+				},
+				{
+					nose:"big"
+				},
+				{
+					mouth:"small"
+				}
+			],
+			body:[
+				{
+					arm:{
+						desc:"短的",
+						hand:{
+							count:2,
+							fingers:["大拇指","食指","中指","无名指","小指"]
+						}
+					}
+				},
+				{
+					stamach:{
+						desc:"啤酒肚"
+					}
+				},
+				{
+					leg:{
+						desc:"小短腿",
+						feet:{
+							count:2,
+							toes:[1,2,3,4,5]
+						}
+					}
+				}
+			]
+		}
+
+		var howMuchHands = person.body[0].arm.hand.count;
+		console.log(howMuchHands);
+		var shortLeg = person.body[2].leg.desc;
+		console.log(shortLeg);
+	</script>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				var res = xhr.responseText;
+				console.log(res);
+				var resObj = eval('('+res+')');
+				console.log(resObj);
+				var cities = resObj.province[1].cities;
+				console.log(cities);
+				for(var i in cities){
+					console.log(cities[i].city+":"+cities[i].peopleNum);
+				}
+			}
+		}
+		xhr.open("get","./001.json");
+		xhr.send(null);
+	</script>
+</body>
+</html>

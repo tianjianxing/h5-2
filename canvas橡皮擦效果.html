@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			border:2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="c3" width="800px" height="600px"></canvas>
+	<br>
+	<script>
+	  var c3 = document.all.c3;
+	  var ctx3 = c3.getContext('2d');
+
+	  var img1 = new Image();
+	  img1.src = '5.jpg';
+
+	  c3.onmousemove = function(e){
+	    console.log(e)
+	    var x = e.offsetX,
+	        y = e.offsetY;
+
+	    ctx3.save();
+	    //ctx3.clearRect(0,0,800,600);//添加此语句实现探照灯效果
+	    ctx3.beginPath();
+	    ctx3.arc(x,y,60,0,2*Math.PI,false);
+	    ctx3.clip();
+
+	    ctx3.drawImage(img1,0,0,800,600);
+	    ctx3.restore();
+	  }
+	</script>
+</body>
+</html>

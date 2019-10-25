@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: #eef3fa;
+			font-size:14px;
+		}
+		a{
+			text-decoration: none;
+			color:blue;
+		}
+		.container{
+			width: 1000px;
+			margin:auto;
+			background-color: #fff;
+			padding:2px;
+		}
+		nav{
+			border-top:3px solid #999999;
+			background-color: #f7f7f7;
+		}
+		nav a{
+			display:inline-block;
+			padding:0 10px;
+			height:30px;
+			line-height: 30px;
+			border-left:1px solid transparent;
+			border-right:1px solid transparent;
+		}
+		nav a:hover{
+			color:red;
+			background-color: #ffffff;
+			border-left:1px solid #dddddd;
+			border-right:1px solid #dddddd;
+		}
+		table{
+			width: 100%;
+			border-bottom:1px dotted #dedede;
+			border-collapse: collapse;
+		}
+		table td,table th{
+			text-align: center;
+			border-top:1px dotted #dedede;
+			height:30px;
+		}
+		table tr :first-child{
+			text-align: left;
+		}
+		table a:hover{
+			text-decoration: underline;
+		}
+		table tr:not(:last-child) td:first-child{
+			padding-left:24px;
+			background-repeat: no-repeat;
+			background-position: left center;
+		}
+		table .shai{
+			background-image:url(1.png);
+		}
+		table .wen{
+			background-image:url(2.png);
+		}
+		table .lun{
+			background-image:url(3.png);
+		}
+		table .quan{
+			background-image:url(4.png);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<a href="">网友讨论圈</a>
+			<a href="">晒单帖</a>
+			<a href="">讨论帖</a>
+			<a href="">问答帖</a>
+			<a href="">圈子帖</a>
+		</nav>
+		<table>
+			<tr>
+				<th>主题</th>
+				<th>回复/浏览</th>
+				<th>作者</th>
+				<th>时间</th>
+			</tr>
+			<tr>
+				<td class="shai">
+					<a href="">好大一瓶，不错</a>
+				</td>
+				<td>0/0</td>
+				<td><a href="">2001年冬天</a></td>
+				<td>2019-3-2</td>
+			</tr>
+			<tr>
+				<td class="wen">
+					<a href="">挺好的</a>
+				</td>
+				<td>0/0</td>
+				<td><a href="">abcd</a></td>
+				<td>2018-3-9</td>
+			</tr>
+			<tr>
+				<td class="shai">
+					<a href="">洗衣液超级划算</a>
+				</td>
+				<td>1/2</td>
+				<td><a href="">BBBB</a></td>
+				<td>2018-9-3</td>
+			</tr>
+			<tr>
+				<td class="wen">
+					<a href="">不错不错</a>
+				</td>
+				<td>3/9</td>
+				<td><a href="">AAAA</a></td>
+				<td>2017-2-3</td>
+			</tr>
+			<tr>
+				<td class="lun">
+					<a href="">好大一瓶，不错</a>
+				</td>
+				<td>0/0</td>
+				<td><a href="">2001年冬天</a></td>
+				<td>2019-3-2</td>
+			</tr>
+			<tr>
+				<td class="lun">
+					<a href="">好大一瓶，不错</a>
+				</td>
+				<td>0/0</td>
+				<td><a href="">2001年冬天</a></td>
+				<td>2019-3-2</td>
+			</tr>
+			<tr>
+				<td class="wen">
+					<a href="">挺好的</a>
+				</td>
+				<td>0/0</td>
+				<td><a href="">abcd</a></td>
+				<td>2018-3-9</td>
+			</tr>
+			<tr>
+				<td class="shai">
+					<a href="">挺好的</a>
+				</td>
+				<td>0/0</td>
+				<td><a href="">abcd</a></td>
+				<td>2018-3-9</td>
+			</tr>
+			<tr>
+				<td class="quan">
+					<a href="">洗衣液超级划算</a>
+				</td>
+				<td>1/2</td>
+				<td><a href="">BBBB</a></td>
+				<td>2018-9-3</td>
+			</tr>
+			<tr>
+				<td class="lun">
+					<a href="">不错不错</a>
+				</td>
+				<td>3/9</td>
+				<td><a href="">AAAA</a></td>
+				<td>2017-2-3</td>
+			</tr>
+			<tr>
+				<td colspan="2">有问题要与其他用户讨论？<a href="">发表帖子</a></td>
+				<td colspan="2" style="text-align: right;">共900个话题 <a href="">浏览全部话题>></a></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

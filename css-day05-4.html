@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		.box{
+			width: 300px;
+			height: 200px;
+			border:1px solid red;
+			/*white-space: nowrap;*/
+			white-space:pre-line;
+		}
+	</style>
+	<div class="box">
+		asf la;sdf 工戈国as
+		djfjf苛地       时；地划土蕈土a;sdf 工戈国asdjfjf苛地 时；地划土蕈土a;s
+		df 工戈国	asdjfjf苛地 时；地划土蕈土a;sdf 工戈国asdjfjf苛地 时；地划土蕈土a;sdf 工戈国asdjfjf苛地 时；地划土蕈土
+	</div>
+	<br>
+	<br>
+	<style>
+		.box1{
+			width: 100px;
+			height: 50px;
+			border:1px solid red;
+			text-overflow:clip;
+			overflow:hidden;
+		}
+	</style>
+	<div class="box1">框图地革戈是薯工alfdj戈工fafja</div>
+	<br>
+	<style>
+		.box2{
+			width: 100px;
+			height: 40px;
+			border:1px solid red;
+			line-height: 40px;
+
+			/*以下三条实现单行文本溢出显示省略号*/
+			overflow:hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+		}
+	</style>
+	<div class="box2">框图地革戈是薯戈是薯戈是薯戈是薯工alfdj戈</div>
+	<br>
+	<br>
+	<style>
+		.box3{
+			width: 100px;
+			border:1px solid black;
+			word-wrap: break-word;
+		}
+	</style>
+	<div class="box3">afdasfasfasdfaasdfaf asdf asdldf a sdfjka ff;asdfa afsadfsafdasfsadfasf 1521414124971259175194712</div>
+	<br>
+	<br>
+	<br>
+	<style>
+		.t1{
+			border:1px solid red;
+			width: 500px;
+			height: 300px;
+			margin:auto;
+			border-collapse:collapse;
+		}
+		td{
+			border:1px solid red;
+		}
+		.t1 tr:last-child{
+			vertical-align: top;
+		}
+	</style>
+	<table class="t1">
+		<tr>
+			<td>0001</td>
+			<td>0002</td>
+			<td>0003</td>
+		</tr>
+		<tr style="vertical-align: bottom;">
+			<td>0001</td>
+			<td style="vertical-align: top;">0002</td>
+			<td>0003</td>
+		</tr>
+		<tr>
+			<td>0001</td>
+			<td>0002</td>
+			<td>0003</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<style>
+		.t2{
+			width: 500px;
+			height: 200px;
+			border:1px solid black;
+			margin:auto;
+			/*border-collapse: collapse;*/
+			border-spacing: 10px 20px;
+
+		}
+		td{
+			border:1px solid black;
+		}
+	</style>
+	<table class="t2">
+		<tr>
+			<td>0001</td>
+			<td>0002</td>
+			<td>0003</td>
+		</tr>
+		<tr>
+			<td>0001</td>
+			<td>0002</td>
+			<td>0003</td>
+		</tr>
+		<tr>
+			<td>0001</td>
+			<td>0002</td>
+			<td>0003</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<style>
+		.t3{
+			width: 500px;
+			height: 200px;
+			border:1px solid black;
+			margin:auto;
+			empty-cells: hide;
+			/*border-collapse: collapse;*/
+			caption-side: bottom;
+		}
+		td{
+			border:1px solid black;
+		}
+	</style>
+	<table class="t3">
+		<caption>表-11</caption>
+		<tr>
+			<td>0001</td>
+			<td>0002</td>
+			<td>0003</td>
+		</tr>
+		<tr>
+			<td>0001</td>
+			<td></td>
+			<td>0003</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0002</td>
+			<td>0003</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<style>
+		.t4{
+			width: 500px;
+			height: 300px;
+			border:1px solid black;
+			margin:auto;
+			/*table-layout: fixed;*/
+		}
+		.t4 td{
+			border:1px solid black;
+		}
+	</style>
+	<table class="t4">
+		<tr>
+			<td>00001</td>
+			<td>00002 000020 0002000 02000020000200002 000020 000200 0020000200002</td>
+			<td>00003</td>
+		</tr>
+		<tr>
+			<td>00001</td>
+			<td>00002</td>
+			<td>00003</td>
+		</tr>
+		<tr>
+			<td>00001</td>
+			<td>00002</td>
+			<td>00003</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr1 = [];
+		var arr2 = [1,2,3,"abc"];
+		var arr3 = new Array();
+		var arr4 = new Array(1,2,3,"abc");
+		var arr5 = new Array(5);
+		var arr6 = new Array("abc");
+		console.log(arr1);
+		console.log(arr2);
+		console.log(arr3);
+		console.log(arr4);
+		console.log(arr5);
+		console.log(arr6);
+	</script>
+	<script>
+		var arr7 = [];
+		arr7[0]="aaa";
+		arr7[1]="bbb";
+		console.log(arr7);
+		var arr8 = new Array();
+		arr8[1] = 1;
+		arr8[3] = 3;
+		console.log(arr8);
+		var arr9 = [,,,];
+		console.log(arr9);
+	</script>
+	<script>
+		var arr10 = [1,2,3,4];
+		console.log(arr10[2]);
+		var n1 = arr10[3];
+	</script>
+	<script>
+		var arr11 = [1,2,3,4,5];
+		var arr12 = arr11;
+		console.log(arr11);
+		console.log(arr12);
+		arr12[4] = 6;
+		console.log(arr12);
+		console.log(arr11);
+	</script>
+	<script>
+		var arr13 = [1,2,3,4,];
+		console.log(arr13.length);
+	</script>
+	<script>
+		var arr14 = ["a","b","c","d"];
+		for(var i = 0;i < arr14.length;i++){
+			console.log(arr14[i]);
+		}
+
+		for(var j in arr14){
+			console.log(arr14[j]);
+		}
+	</script>
+	<!-- <script>
+		var arr15 = [1,2,3,"abc",true];
+		console.log(arr15.toString());
+		console.log(arr15.join("^^^"));
+	</script>
+	<script>
+		var arr16 = [1,2,3];
+		var arr17 = [4,5];
+		var arr18 = ["a","b"];
+		var arr19 = arr16.concat(arr18,arr17);
+		console.log(arr19);
+	</script>
+	<script>
+		var arr20 = [1,2,3,4,5,6,7];
+		var arr21 = arr20.slice(1,4);
+		console.log(arr21);
+		var arr22 = arr20.slice(3);
+		console.log(arr22);
+		var arr23 = arr20.slice(-4,-1);
+		console.log(arr23);
+	</script> -->
+</body>
+</html>

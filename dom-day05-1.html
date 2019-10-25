@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="按钮" id="btn1">
+	<script>
+		var btn1 = document.all.btn1;
+		btn1.onclick = function(){
+			var e = window.event || arguments[0];
+			console.log(e);
+			var srcEle = e.srcElement || e.target;
+			console.log(srcEle);
+		}
+	</script>
+	<!-- <script>
+		function fun1(){
+			console.log(arguments);
+		}
+		fun1();
+	</script> -->
+	<input type="text" id="txt1">
+	<script>	
+		var txt1 = document.all.txt1;
+		txt1.onkeyup = function(){
+			var e = window.event || arguments[0];
+			console.log(e);
+			var k = e.which || e.keyCode || e.charCode;
+			console.log(k);
+		}
+	</script>
+	<input type="button" value="按钮1" id="btn2">
+	<script>
+		var btn2 = document.all.btn2;
+		btn2.onclick = function(){
+			var e = window.event || arguments[0];
+			console.log(e);
+		}
+	</script>
+	<style>
+		.box1{
+			width: 300px;
+			height: 300px;
+			background-color: #f00;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: #0f0;
+		}
+		.box3{
+			width: 100px;
+			height: 100px;
+			background-color: #00f;
+		}
+	</style>
+	<div class="box1">
+		<div class="box2">
+			<div class="box3"></div>
+		</div>
+	</div>
+	<script>
+		var box1 = document.querySelector('.box1');
+		var box2 = document.querySelector('.box2');
+		var box3 = document.querySelector('.box3');
+		box1.onclick = function(){
+			var e = window.event || arguments[0];
+			var srcEle = e.srcElement || e.target;
+			console.log(this);
+			console.log(srcEle);
+		}
+		box2.onclick = function(){
+			var e = window.event || arguments[0];
+			var srcEle = e.srcElement || e.target;
+			console.log(this);
+			console.log(srcEle);
+		}
+		box3.onclick = function(){
+			var e = window.event || arguments[0];
+			var srcEle = e.srcElement || e.target;
+			console.log(this);
+			console.log(srcEle);
+			console.log(e)
+			if(e.stopPropagation){
+				e.stopPropagation();
+			}else{
+				e.cancelBubble = true;
+			}
+		}
+	</script>
+	<form action="">
+		<input type="text" value="123">
+		<input type="submit">
+		<input type="reset">
+	</form>
+	<script>
+		var submitBtn = document.querySelector('form [type=submit]');
+		var resetBtn = document.querySelector('form [type=reset]');
+		submitBtn.onclick = function(){
+			var e = window.event || arguments[0];
+			console.log(e);
+			if(e.preventDefault){
+				e.preventDefault();
+			}else{
+				e.returnValue = false;
+			}
+		}
+		resetBtn.onclick = function(){
+			var e = window.event || arguments[0];
+			console.log(e);
+			if(e.preventDefault){
+				e.preventDefault();
+			}else{
+				e.returnValue = false;
+			}
+		}
+	</script>
+</body>
+</html>

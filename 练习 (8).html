@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+	<style>
+		.dropBox,.file{
+			width: 100px;
+			height: 100px;
+			background-image: url(recycle.png);
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.file{
+			background-image: url(files.png);
+		}
+	</style>
+</head>
+<body>
+	<div class="dropBox"></div>
+	<div class="file" draggable="true">1</div>
+	<div class="file" draggable="true">2</div>
+	<div class="file" draggable="true">3</div>
+	<div class="file" draggable="true">4</div>
+	<div class="file" draggable="true">5</div>
+	<div draggable="true">8888</div>
+	<script>
+		var _this;
+		$('.file').on('dragstart',function(){
+			_this = $(this);
+		})
+		// .on('dragend',function(){
+		// 	_this = null;
+		// })
+
+		$(".dropBox").on('dragover',function(e){
+			e.preventDefault();
+		}).on('drop',function(){
+			if(_this){
+				_this.remove();
+			}
+		})
+
+
+		// $('.file').on('dragstart',function(){
+		// 	$('.file').removeClass('current');
+		// 	$(this).addClass('current');
+		// })
+		// $(".dropBox").on('dragover',function(e){
+		// 	e.preventDefault();
+		// }).on('drop',function(){
+		// 	$('.current').remove();
+		// })
+
+	</script>
+</body>
+</html>

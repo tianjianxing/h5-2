@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div id="box"></div>
+	<div class="abc"></div>
+	<script>
+		var box = $("#box");
+		console.log(box);
+		box.html("<p>ABc</p>");
+
+		var abc = document.querySelector('.abc');
+		abc.innerHTML = "999";
+		$(abc).html("000");
+	</script>
+	<div class="d1"></div>
+	<div class="d1"></div>
+	<div class="d1"></div>
+	<script>
+		var d1 = $('.d1');
+		console.log(d1);
+		d1.html("888");
+		d1.get(1).innerHTML = "666";
+		d1[2].innerHTML = 222;
+	</script>
+	<div class="d2"></div>
+	<div class="d2"></div>
+	<div class="d2"></div>
+	<p class="p1"></p>
+	<p class="p1"></p>
+	<script>
+		console.log($(".d2,.p1"));
+		$(".d2,.p1").html("55");
+	</script>
+</body>
+</html>

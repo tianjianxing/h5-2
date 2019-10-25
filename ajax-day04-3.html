@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<script src="jquery.validate.js"></script>
+</head>
+<body>
+	<!-- <form action="" enctype="multipart/form-data" method="post">
+		<input type="file">
+	</form> -->
+
+	<form id="f1">
+		用户名：<input type="text" name="username">
+		<br>
+		密码：<input type="password" name="pwd">
+		<br>
+		头像：<input type="file" name="tx">
+		<br>
+		<input type="submit" value="注册">
+	</form>
+	<script>
+		$("#f1").validate({
+			submitHandler:function(form){
+				var fd = new FormData(form);
+				$.ajax({
+					url:"formDataLoginTest-reg.php",
+					type:"post",
+					data:fd,
+					contentType:false,
+					processData:false,
+					success:function(res){
+						console.log(res);
+					}
+				})
+			},
+			rules:{
+				username:"required",
+				pwd:"required",
+				tx:"required"
+			}
+		})
+	</script>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<form id="f2">
+		用户名：<input type="text" name="username">
+		<br>
+		密码：<input type="password" name="pwd">
+		<br>
+		<input type="submit" value="登录">
+	</form>
+	<div class="box">
+		<img src="" alt="" height="50">
+		<b></b>
+	</div>
+	<script>
+		$("#f2").validate({
+			submitHandler:function(form){
+				var para = $(form).serialize();
+				$.ajax({
+					url:'formDataLoginTest-login.php',
+					type:"post",
+					data:para,
+					dataType:'json',
+					success:function(res){
+						console.log(res);
+						$(".box img").attr('src',res.tx);
+						$(".box b").text(res.uname+",欢迎登录！");
+					}
+				})
+			},
+			rules:{
+				username:"required",
+				pwd:"required"
+			}
+		})
+	</script>
+	
+	http://1.51.177.70:8888/formTest/ajax-day04-3.html
+</body>
+</html>

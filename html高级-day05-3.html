@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			border:2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas class="c1" width="600px" height="400px"></canvas>
+	<script>
+		var c1 = document.querySelector('.c1');
+		var ctx1 = c1.getContext('2d');
+
+		ctx1.strokeStyle = "red";
+		ctx1.lineWidth = 5;
+		ctx1.lineJoin = "round";
+
+		ctx1.save();
+
+		ctx1.beginPath();
+		ctx1.moveTo(50,50);
+		ctx1.lineTo(300,100);
+		ctx1.lineTo(100,130);
+		ctx1.stroke();
+
+		ctx1.strokeStyle = "blue";
+		ctx1.lineWidth = 10;
+
+		ctx1.save();
+
+		ctx1.beginPath();
+		ctx1.moveTo(120,150);
+		ctx1.lineTo(240,180);
+		ctx1.lineTo(120,200);
+		ctx1.stroke();
+
+		ctx1.restore();
+
+		ctx1.beginPath();
+		ctx1.moveTo(100,240);
+		ctx1.lineTo(240,240);
+		ctx1.stroke();
+
+		ctx1.restore();
+
+		ctx1.beginPath();
+		ctx1.moveTo(100,280);
+		ctx1.lineTo(300,280);
+		ctx1.stroke();
+	</script>
+	<canvas class="c2" width="600px" height="400px">
+		该浏览器不支持canvas
+	</canvas>
+	<script>
+		var c2 = document.querySelector('.c2');
+		var ctx2 = c2.getContext('2d');
+
+		// ctx2.scale(1.5,.5);
+		// ctx2.fillRect(50,50,50,50);
+		// ctx2.fillRect(100,380,50,50);
+
+		ctx2.translate(50,50);
+		ctx2.fillRect(0,0,50,50);
+		ctx2.fillRect(-20,100,50,50);
+	</script>
+
+	<canvas class="c3" width="600px" height="400px">
+		该浏览器不支持canvas
+	</canvas>
+	<script>
+		var c3 = document.querySelector('.c3');
+		var ctx3 = c3.getContext('2d');
+
+		// ctx3.rotate(30*Math.PI/180);
+		// ctx3.fillRect(50,50,50,50);
+
+		ctx3.translate(300,200);
+		ctx3.rotate(30*Math.PI/180);
+		ctx3.fillRect(-50,-50,100,100);
+	</script>
+</body>
+</html>

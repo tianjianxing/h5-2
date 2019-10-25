@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.d{
+			color: red;
+		}
+		a:hover{
+			color: orange;
+		}
+		header a{
+			border: 1px solid blue;
+		}
+		section nav a{
+			border: 1px solid green;
+		}
+		section div b{
+			color: brown;
+		}
+		section div li .b1{
+			color: red;
+		}
+		footer b{
+			color: silver;
+		}
+	</style>
+</head>
+<body>
+	<!-- 要求：1.logo颜色为红色
+			   2.所有a元素鼠标悬停时文本颜色为orange
+			   3.所有header中的a元素设置border:1px solid blue
+			   4.所有section中nav中的a元素设置border:1px solid green
+			   5.所有section中“我是商品”文本颜色设置为brown
+			   6.“我是大商品”颜色设置为red
+			   7.footer中的b元素文本颜色为silver
+
+			   说明：根据需要自行设置class值或id值
+	 -->
+	<header>
+		<div class="d">LOGO</div>
+		<nav>
+			<ul>
+				<li><a href="">首页</a></li>
+				<li><a href="">商品</a></li>
+				<li><a href="">业务</a></li>
+				<li><a href="">关于</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<nav>
+			<ul>
+				<li><a href="">服装</a></li>
+				<li><a href="">鞋帽</a></li>
+				<li><a href="">电子</a></li>
+				<li><a href="">服务</a></li>
+			</ul>
+		</nav>
+		<div>
+			<ul>
+				<li><b>我是商品</b></li>
+				<li><b>我是商品</b></li>
+				<li><b>我是商品</b></li>
+				<li><b class="b1">我是大商品</b></li>
+				<li><b>我是商品</b></li>
+				<li><b>我是商品</b></li>
+				<li><b>我是商品</b></li>
+				<li><b>我是商品</b></li>
+				<li><b>我是商品</b></li>
+			</ul>
+		</div>
+	</section>
+	<footer>
+		<p>版权信息：公司公司 公司</p>
+		<p>注册号：<b>12342413241431</b></p>
+	</footer>
+</body>
+</html>

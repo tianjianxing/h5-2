@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="按钮" onclick="fun()">
+	<script>
+		function fun(){
+
+		}
+
+	</script>
+	<input type="button" value="按钮1" id="btn1">
+	<script>
+		var btn1 = document.all.btn1;
+		btn1.onclick = function(){
+			console.log("abc");
+			console.log(this);
+		}
+
+		btn1.onclick = function(){
+			console.log("bbb");
+		}
+	</script>
+	<input type="button" value="按钮2" id="btn2">
+	<script>
+		var btn2 = document.all.btn2;
+		btn2.addEventListener("click",function(){
+			console.log(this);
+		},false)
+
+		btn2.addEventListener("click",function(){
+			console.log("222");
+		},false)
+	</script>
+	<div id="box" style="width:200px;height:200px;background-color: red;"></div>
+	<script>
+		var box = document.all.box;
+		box.ondblclick = function(){
+			console.log("我被双击了");
+		}
+		box.onmouseover = function(){
+			console.log("鼠标移入");
+		}
+		box.onmouseout = function(){
+			console.log("鼠标移出");
+		}
+		box.onmousedown = function(){
+			console.log("鼠标按下");
+		}
+		box.onmouseup = function(){
+			console.log("鼠标弹起");
+		}
+	</script>
+	<input type="text" id="t1">
+	<script>
+		var t1 = document.all.t1;
+		// t1.onkeypress = function(){
+		// 	console.log(this.value);
+		// }
+		// t1.onkeydown = function(){
+		// 	console.log("down");
+		// }
+		// t1.onkeyup = function(){
+		// 	console.log("up");
+		// }
+		t1.onchange = function(){
+			console.log(this.value);
+		}
+	</script>
+	<script>
+		window.onresize = function(){
+			console.log(window.innerWidth);
+			console.log(window.innerHeight);
+		}
+	</script>
+</body>
+</html>

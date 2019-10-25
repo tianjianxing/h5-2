@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    canvas{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="c1" width="600px" height="400px"></canvas>
+  <script>
+    var c1 = document.all.c1;
+    var ctx1 = c1.getContext('2d');
+
+    var img = new Image();
+    img.src = '5.jpg';
+
+    ctx1.beginPath();
+    // ctx1.arc(300,200,100,0,2*Math.PI,false);
+    ctx1.moveTo(50,50);
+    ctx1.lineTo(200,80);
+    ctx1.lineTo(200,120);
+    ctx1.lineTo(80,150);
+    ctx1.closePath();
+    // ctx1.stroke();
+    ctx1.clip();
+
+    img.onload = function(){
+      ctx1.drawImage(img,0,0,600,400);
+    }
+    
+  </script>
+  <br>
+  <br>
+  <canvas id="c2" width="600px" height="400px"></canvas>
+  <br>
+  <script>
+    var c2 = document.all.c2;
+    var ctx2 = c2.getContext('2d');
+
+    // ctx2.scale(1.2,2);
+    // ctx2.translate(50,0);
+    ctx2.rotate(30*Math.PI/180);
+
+    ctx2.strokeStyle = "red";
+    ctx2.lineWidth = 5;
+    ctx2.beginPath();
+    ctx2.moveTo(50,50);
+    ctx2.lineTo(400,50);
+    ctx2.stroke();
+
+    ctx2.save();
+
+    ctx2.strokeStyle = "blue";
+    ctx2.lineWidth = 10;
+    ctx2.beginPath();
+    ctx2.moveTo(50,100);
+    ctx2.lineTo(400,100);
+    ctx2.stroke();
+
+    ctx2.restore();
+    
+    // ctx2.save();
+    ctx2.beginPath();
+    ctx2.moveTo(50,150);
+    ctx2.lineTo(400,150);
+    ctx2.stroke();
+
+  </script>
+  <br>
+  <canvas id="c3" width="800px" height="600px"></canvas>
+  <br>
+  <script>
+    var c3 = document.all.c3;
+    var ctx3 = c3.getContext('2d');
+
+    var img1 = new Image();
+    img1.src = '5.jpg';
+
+    c3.onmousemove = function(e){
+      console.log(e)
+      var x = e.offsetX,
+          y = e.offsetY;
+
+      ctx3.save();
+      // ctx3.clearRect(0,0,800,600);
+      ctx3.beginPath();
+      ctx3.arc(x,y,60,0,2*Math.PI,false);
+      ctx3.clip();
+
+      ctx3.drawImage(img1,0,0,800,600);
+      ctx3.restore();
+    }
+  </script>
+  <br>
+
+  <img src="1.svg" alt="">
+
+  <br>
+  <br>
+  <canvas id="c4" width="600px" height="400px"></canvas>
+  <script>
+    var c4 = document.all.c4;
+    var ctx4 = c4.getContext('2d');
+
+    ctx4.strokeStyle = "orange";
+    ctx4.save();//第一次保存
+    ctx4.beginPath();
+    ctx4.moveTo(50,50);
+    ctx4.lineTo(400,50);
+    ctx4.stroke();
+
+    ctx4.strokeStyle = "red";
+    ctx4.save();//第二次保存
+
+    ctx4.beginPath();
+    ctx4.moveTo(50,100);
+    ctx4.lineTo(400,100);
+    ctx4.stroke();
+
+    ctx4.strokeStyle = "blue";
+    ctx4.save();//第三次保存
+    ctx4.restore();//第三次保存的恢复
+
+    ctx4.beginPath();
+    ctx4.moveTo(50,150);
+    ctx4.lineTo(400,150);
+    ctx4.stroke();
+
+    ctx4.restore();//第二次保存的恢复
+
+    ctx4.beginPath();
+    ctx4.moveTo(50,200);
+    ctx4.lineTo(400,200);
+    ctx4.stroke();
+
+    ctx4.restore();//第一次保存的恢复
+
+    ctx4.beginPath();
+    ctx4.moveTo(50,250);
+    ctx4.lineTo(400,250);
+    ctx4.stroke();
+  </script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>

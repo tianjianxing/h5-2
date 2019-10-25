@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="./html高级-day02-1.html">11111</a>
+	<script>
+		// sessionStorage.setItem('abc','123');
+		// sessionStorage.setItem('bbb','222');
+
+		// console.log(sessionStorage.getItem('abc'));
+		// console.log(sessionStorage.key(0));
+		// console.log(sessionStorage.length);
+
+		// sessionStorage.removeItem('abc');
+		// sessionStorage.clear();
+	</script>
+	<script>
+		// sessionStorage.setItem("a",1);
+		// sessionStorage.setItem("b",2);
+		// sessionStorage.setItem("c",3);
+		// sessionStorage.setItem("d",4);
+		// sessionStorage.setItem("e",5);
+
+		for(var i = 0;i < sessionStorage.length;i++){
+			console.log(sessionStorage.key(i)+":"+sessionStorage.getItem(sessionStorage.key(i)));
+		}
+	</script>
+	<script>
+		// localStorage.setItem("aa",1);
+		// localStorage.setItem("bb",2);
+
+		// console.log(localStorage.getItem('bb'));
+		// console.log(localStorage.key(1));
+		// console.log(localStorage.length);
+
+		// localStorage.removeItem('aa');
+		// localStorage.clear();
+
+	</script>
+	<script>
+		// localStorage.setItem("sss",3333);
+		localStorage.setItem("aaa","111");
+	</script>
+</body>
+</html>

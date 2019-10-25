@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+	<style>
+		#box{
+			width: 300px;
+			height: 100px;
+			background-color: #ff0;
+			border:10px solid red;
+			padding:20px;
+			/*overflow: auto;*/
+			margin:10px;
+		}
+	</style>
+</head>
+<body>
+	<br>
+	<br>
+	<br>asdfafasf
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<br>
+	<br>
+	<div id="box">444 4asf asdf asf af aff afsafasfas saf as fasf asf afaf safa fsfasf a4asf asdf asf af aff afsafasfas saf as fasf asf afaf safa fsfasf a4asf asdf asf af aff afsafaf as fasf asf afaf safa fsfasf a4asf asdf asf af aff afsaf</div>
+	<script>
+		console.log($("#box").width());
+		console.log($("#box").height());
+		console.log($("#box").innerWidth());
+		console.log($("#box").innerHeight());
+		console.log($("#box").outerWidth());
+		console.log($("#box").outerHeight());
+		console.log($("#box").outerWidth(true));
+		console.log($("#box").outerHeight(true));
+
+		console.log($("#box").offset().left);
+		console.log($("#box").offset().top);
+		// $("#box").offset({
+		// 	left:0,
+		// 	top:0
+		// })
+		// .css("z-index","-1")
+		// .addClass("a1")
+		// .click(function(){
+
+		// })
+		// .mouseover(function(){
+
+		// })
+	</script>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	aaa
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	aaa
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>rrr</p>
+	<input type="button" value="按钮" id="aaa">
+	<script>
+		console.log($(window).width());
+		console.log($(window).height());
+		console.log($(document).width());
+		console.log($(document).height());
+		console.log($(document.body).width());
+		console.log($(document.body).height());
+
+		$(window).scroll(function(){
+			console.log($(document).scrollTop());
+		})
+		$("#aaa").click(function(){
+			$(document).scrollTop(200);
+		})
+		
+	</script>
+</body>
+</html>

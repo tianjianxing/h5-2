@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+	<script src="./jquery.validate.js"></script>
+	<script src="./messages_zh.js"></script>
+	<style>
+		label.aaabbb{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<form action="" id="f1">
+		用户名：<input type="text" name="user">
+		<br>
+		密码：<input type="password" name="pwd" id="pwd">
+		<br>
+		确认密码：<input type="password" name="repwd">
+		<br>
+		email: <input type="email" name="email">
+		<br>
+		<div class="wraper">
+			性别：
+			<input type="radio" value="male" name="sex">男
+			<input type="radio" value="female" name="sex">女	
+		</div>
+		<div class="wraper">
+			爱好：
+			<input type="checkbox" name="hobby">篮球
+			<input type="checkbox" name="hobby">足球
+			<input type="checkbox" name="hobby">乒乓球
+			<input type="checkbox" name="hobby">羽毛球
+			<input type="checkbox" name="hobby">排球
+		</div>
+		年龄：<input type="number" name="age">
+		<br>
+		<input type="submit">
+	</form>
+	<script>
+		$("#f1").validate({
+			submitHandler:function(form){//submit句柄，替代submit的提交功能，参数form为当前验证的表单dom对象
+				console.log("验证通过");
+				console.log(form);
+				form.submit();
+			},
+			errorPlacement:function(err,ele){//用于设置错误信息的位置，参数err表示错误信息的dom对象，参数ele表示产生错误信息的元素的dom对象
+				if($(ele).parent().hasClass('wraper')){
+					$(ele).parent().append(err);
+				}else{
+					$(ele).after(err);
+				}
+			},
+			errorClass:"aaabbb",//修改错误信息元素的class值，默认为error
+			rules:{//验证规则
+				user:{
+					required:true,//必填
+					rangelength:[4,8]//长度范围
+				},
+				pwd:{
+					required:true,
+					rangelength:[6,16]
+				},
+				repwd:{
+					equalTo:"#pwd"//与该属性值选择器对应元素的值保持一致
+				},
+				email:"required",
+				sex:"required",
+				hobby:{
+					required:true,
+					minlength:2//最小长度
+				},
+				age:{
+					required:true,
+					range:[0,120]//元素值的取值范围
+				}
+			},
+			messages:{//错误提示信息
+				user:{
+					required:"用户名必填",
+					rangelength:"用户名长度在${0}字符到${1}字符之间"
+				},
+				pwd:{
+					required:"密码必填",
+					rangelength:"密码长度在${0}字符到${1}字符之间"
+				},
+				repwd:{
+					equalTo:"和密码不一致"
+				},
+				email:"请填写email",
+				sex:"请选择性别",
+				hobby:{
+					required:"请选择你的爱好",
+					minlength:"最少选择${0}个爱好"
+				},
+				age:{
+					required:"填写年龄",
+					range:"年龄范围在${0}~${1}之间"
+				}
+			}
+		})
+		/*
+			min:2  值最小为2
+			max:5  值最大为5
+			range  最值范围 
+			minlength  最小长度
+			maxlength  最大长度
+			rangelength  长度范围
+
+		*/
+	</script>
+</body>
+</html>

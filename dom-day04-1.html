@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		console.log(window.innerHeight);
+		console.log(window.innerWidth);
+		var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		console.log(w,h);
+
+		console.log(window.outerWidth);
+		console.log(window.outerHeight);
+	</script>
+	<input type="button" value="打开新窗口" onclick="openWin()">
+	<input type="button" value="关闭新窗口" onclick="closeWin()">
+	<script>
+		var newWin;
+		function openWin(){
+			// open();//不写参数是打开一个空白页
+			// open("http://www.baidu.com/");
+			newWin = open("http://www.baidu.com/");
+			console.log(newWin);
+		}
+		function closeWin(){
+			newWin.close();
+		}
+	</script>
+	<br>
+	<input type="button" value="按钮1" onclick="fun1()">
+	<br>
+	<a href="http://www.sina.com/" target="QQ">QQQQQ</a>
+	<script>
+		function fun1(){
+			open("http://www.qq.com/","QQ","width=500,height=400,toolbar=no,top=200,left=100");
+		}
+	</script>
+	<b onclick="fun2()">这里有一些字</b>
+	<script>
+		function fun2(){
+			var n = confirm("一些提示信息");
+			console.log(n);
+			if(n){
+				console.log("ok");
+			}
+		}
+	</script>
+
+	<input type="button" value="clearTimeout" onclick="fun3()">
+	<script>
+		var num = 10;
+		var timer = setInterval(function(){
+			console.log(num--);
+			if(num < 0){
+				clearInterval(timer);
+			}
+		},1000)
+
+		var timer1 = setTimeout(function(){
+			console.log("AAAA");
+		},3000)
+		function fun3(){
+			clearTimeout(timer1);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+	<ul class="u1">
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+		<li>005</li>
+		<li class="li6">006</li>
+		<li>007</li>
+		<li>008</li>
+		<li>009</li>
+		<li>010</li>
+	</ul>
+	<script>
+		$(".u1 :first").css("background-color","red");
+		$(".u1 :last").css("background-color","blue");
+		$(".u1 :not(.u1 :nth-child(6))").css("border","1px solid black");
+	</script>
+	<ul class="u2">
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+		<li>005</li>
+		<li>006</li>
+		<li>007</li>
+		<li>008</li>
+		<li>009</li>
+		<li>010</li>
+	</ul>
+	<script>
+		$('.u2 :odd').css("background-color","red");
+		$('.u2 :even').css("background-color","blue");
+		$('.u2 :eq(3)').css("color","orange");
+		$('.u2 :gt(5)').css("color","pink");
+		$('.u2 :lt(3)').css("color","brown");
+	</script>
+	<div class="d3"></div>
+	<div class="d3"></div>
+	<div class="d3"></div>
+	<script>
+		$(".d3:eq(1)").html("999");
+	</script>
+	<div class="d4">
+		abc
+		<p>bbasdfaasdfb
+			<b>bbbadfadfwefqabbbb</b>
+		</p>
+	</div>
+	<script>
+		$('.d4 :contains(bbb)').css('border','1px solid blue');
+	</script>
+	<ul class="u3">
+		<li>001</li>
+		<li>002</li>
+		<li></li>
+		<li>004</li>
+		<li>005</li>
+		<li>006
+   			<b>dddd</b>
+		</li>
+		<li></li>
+		<li>
+			<b>aaaaaa</b>
+			<i>iiii</i>
+		</li>
+		<li>009</li>
+		<li>010</li>
+	</ul>
+	<script>
+		$('.u3 :empty').css('border','1px solid red');
+		$('.u3 :has(b)').css('padding','5px');
+		$('.u3 :parent').css('border','1px solid blue');
+		$('.u3 :only-child').css('background-color','yellow');
+	</script>
+</body>
+</html>

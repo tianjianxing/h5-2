@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	03
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				console.log(xhr.responseText);
+				// var par = new DOMParser();
+				// xmlDOM = par.parseFromString(xhr.responseText,'application/xml');
+				// console.log(xmlDOM);
+				// var cy = xmlDOM.getElementsByTagName('chaoyang')[0];
+				// console.log(cy);
+				// console.log(cy.textContent);
+				// console.log(cy.getAttribute('qunzhong'));
+				// var jn = xmlDOM.querySelector('jinan');
+				// console.log(jn.textContent);
+
+				var xmlDOM1 = xhr.responseXML;
+				console.log(xmlDOM1);
+			}
+		}
+		xhr.open('get','./01.xml');
+		xhr.send(null);
+	</script>
+</body>
+</html>

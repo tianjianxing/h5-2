@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="d1">111</div>
+	<div class="d1 d2">222</div>
+	<div class="d1">333</div>
+	<script>
+		var d1 = $(".d1");
+		console.log(d1.length);
+
+		d1.each(function(i){
+			console.log(i,this);
+			$(this).text(i);
+		})
+
+		console.log(d1.get());
+
+		var i = d1.index($(".d1"));
+		console.log(i);
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var obj = {
+			abc:123,
+			fun:function(){
+				console.log(111);
+			}
+		}
+
+		var str = "123";
+		console.log(str.length);
+
+		function Person(n,s){
+			this.n = n;
+			this.s = s;
+			this.fun1 = function(arg){
+				console.log(arg);
+			}
+		}
+		var p1 = new Person("a","b");
+		var p2 = new Person("c","d");
+		p1.fun1(111);
+		p1.fun1(222);
+	</script>
+
+	<script>
+		function People(uname,uage){
+			this.name = uname;
+			this.age = uage;
+		}
+		var n1 = new People("张三",22);
+		var n2 = new People("李四",33);
+		console.log(n1,n2);
+		// n1.sex = "男";
+		// n2.sex = "男";
+		// console.log(n1,n2);
+		People.prototype.sex = "男";
+		n1.__proto__.sex="女";//__proto__:原型链
+
+		console.log(n1.sex);
+	</script>
+	<script>
+		String.prototype.fun = function(){
+			console.log(this+"ABC");
+		}
+		var str1 = "111";
+		str1.fun();
+		var str2 = "AAA";
+		str2.fun();
+
+		//为String扩展一个方法repeatify(n)，实现输出n次字符串
+		String.prototype.repeatify = function(n){
+			var tempStr = "";
+			for(var i = 0;i < n;i++){
+				tempStr += this;
+			}
+			return tempStr;
+		}
+		var str3 = "abc";
+		console.log(str3.repeatify(3));
+	</script>
+</body>
+</html>

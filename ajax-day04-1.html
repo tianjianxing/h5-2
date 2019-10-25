@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+	https://www.apiopen.top/weatherApi
+
+	<div class="box"></div>
+	<script>
+		$('.box').load('https://www.apiopen.top/weatherApi','city=德州');
+		$.get('https://www.apiopen.top/weatherApi',{city:"德州"},function(data){
+			console.log(data);
+		})
+
+		$.post('https://www.apiopen.top/weatherApi',"city=德州",function(data){
+			console.log(data);
+		})
+
+		$.ajax({
+			url:'https://www.apiopen.top/weatherApi',
+			type:'get',
+			data:{
+				'city':'德州'
+			},
+			// dataType:'json',
+			success:function(res){
+				console.log(res);
+			},
+			error:function(err){
+				console.log(err);
+			},
+			async:true
+		})
+	</script>
+</body>
+</html>

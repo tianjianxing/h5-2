@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script>
+		var num = prompt("输入车牌号尾号");
+		switch(num){
+			case "4":
+			case "9":
+				console.log("星期一限号");
+				break;
+			case "5":
+			case "0":
+				console.log("星期二限号");
+				break;
+			case "1":
+			case "6":
+				console.log("星期三限号");
+				break;
+			case "2":
+			case "7":
+				console.log("星期四限号");
+				break;
+			case "3":
+			case "8":
+				console.log("星期五限号");
+		}
+		console.log("公休日不限行");
+	</script>
+
+	<script>
+		var n1 = 1;
+		while(n1 < 100){
+			if(n1 % 9 == 0){
+				console.log(n1);
+			}
+			n1++;
+		}
+
+		var n2 = 1;
+		do{
+			if(n2 % 9 == 0){
+				console.log(n2);
+			}
+			n2++;
+		}while(n2 < 100)
+
+	</script>
+ -->
+	<script>
+		var days = 1,total=0;
+		while(days <= 7){
+			var temperature = prompt("请输入第"+days+"天气温");
+			total += temperature;
+			days++;
+		}
+		console.log("7天平均气温为："+total/7);
+	</script>
+
+	<!-- <script>
+		var user = "abc",pwd = "123";
+		do{
+			var u = prompt("请输入用户名");
+			var p = prompt("请输入密码");
+		}while(u != user || p != pwd)
+		console.log("登录成功");
+	</script>
+
+	<script>
+		var count = 0;
+		do{
+			var char = prompt("输入一个字符");
+			if(char == "a" || char == "A"){
+				count++;
+			}
+		}while(char != "#")
+		console.log(count);
+	</script>
+
+	<script>
+		do{
+			var num = prompt("请输入一个数");
+			if(parseInt(num) % 5 == 0){
+				console.log(num);
+			}
+		}while(num != "!")
+	</script> -->
+</body>
+</html>

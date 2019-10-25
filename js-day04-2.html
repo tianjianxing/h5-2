@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr1 = [1,2,3,4];
+		var aaa = arr1.splice(2,2);
+		console.log(arr1,aaa);
+
+		var arr2 = [1,2,3,4];
+		var bbb = arr2.splice(3,0,5,6);
+		console.log(arr2,bbb);
+
+		var arr3 = [1,2,3,4];
+		arr3.splice(1,2,5,6);
+		console.log(arr3);
+	</script>
+	<script>
+		var arr4 = [1,2,3,4];
+		arr4.reverse();
+		console.log(arr4);
+	</script>
+	<script>
+		var arr5 = [1,3,5,7,2,6,9];
+		arr5.sort();
+		console.log(arr5);
+		//ASCII码
+		// 空格 32  数字0  48   大写字母A  65   小写字母a   97
+
+		var arr6 = ["001","100",0,10,"a","bbb","B",2,98];
+		arr6.sort().reverse();
+		console.log(arr6);
+	</script>
+	<script>
+		var arr7 = [1,2,3];
+		arr7.push(4,"abc");
+		console.log(arr7);
+		var len = arr7.push(8);
+		console.log(arr7);
+		console.log(len);
+
+		arr7.pop();
+		console.log(arr7);
+		var e1 = arr7.pop();
+		console.log(arr7);
+		console.log(e1);
+
+		var e2 = arr7.shift();
+		console.log(arr7,e2);
+
+		var len1 = arr7.unshift(9,8);
+		console.log(arr7,len1);
+	</script>
+</body>
+</html>

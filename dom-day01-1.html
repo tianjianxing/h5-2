@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="a1">123</div>
+	ABC
+	<a href="">AAA</a>
+	<!-- 注释 -->
+	<script>
+		var a1 = document.getElementById('a1');
+		console.log(a1);
+		console.log(a1.nodeType);
+		console.log(a1.nodeName);
+		console.log(a1.nodeValue);
+		console.log(a1.attributes[0].nodeName);
+		console.log(a1.attributes[0].nodeType);
+		console.log(a1.attributes[0].nodeValue);
+		console.log(a1.childNodes[0].nodeName);
+		console.log(a1.childNodes[0].nodeType);
+		console.log(a1.childNodes[0].nodeValue);
+		var aa = document.querySelector("a");
+		console.log(aa.nextSibling.nextSibling.nodeName);
+		console.log(aa.nextSibling.nextSibling.nodeType);
+		console.log(aa.nextSibling.nextSibling.nodeValue);
+		console.log(document.nodeName);
+		console.log(document.nodeType);
+		console.log(document.nodeValue);
+	</script>
+	<div id="box">
+		<p class="p1">
+			<b>bbb</b>
+			<a href="">aaa</a>
+		</p>
+		一些文字
+		<div class="d2">
+			<s>sss</s>
+		</div>
+		<!-- 这是一个注释 -->
+	</div>
+	<script>
+		var box = document.getElementById("box");
+		console.log(box);
+		console.log(box.parentNode);
+		console.log(box.childNodes[3]);
+		console.log(box.firstChild.nextSibling.childNodes);
+		//box.firstChild是空文本，后面跟nextSibling才是p元素。
+		console.log(box.lastChild.previousSibling.nodeValue);
+	</script>
+</body>
+</html>

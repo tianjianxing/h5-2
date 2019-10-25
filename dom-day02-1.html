@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="d1" class="dd1" style="color:red;">ABCDE</div>
+	<script>
+		var d1 = document.all.d1;
+		console.log(d1.attributes);
+
+		console.log(d1.getAttribute("class"));
+		console.log(d1.attributes[1].value);
+
+		d1.setAttribute("class","ccc");
+
+		console.log(d1.hasAttribute('class'));
+
+		// d1.removeAttribute("style");
+
+		d1.setAttribute("name","n1");
+
+		console.log(d1.id);
+		d1.id = "sss";
+
+		d1.title = "这是一个title";
+
+		console.log(d1.style.color);
+
+		console.log(d1.className);
+		d1.className = "eeee";
+	</script>
+</body>
+</html>

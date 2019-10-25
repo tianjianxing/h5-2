@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	这是我的一个网页
+
+	<br>
+	<!-- localhost:8888/test.html  localhost代表本机-->
+	<!-- 127.0.0.1:8888/test.html 127.0.0.1代表本机网卡-->
+	<!-- 1.51.177.70:8888/test.html 1.51.177.70代表本机的网络地址-->
+
+	3cfdb251b248451792b7d99fd9d05fdc
+	38010
+
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				console.log(JSON.parse(xhr.responseText));
+			}
+		}
+		// xhr.open('get','http://route.showapi.com/1196-1?showapi_appid=38010&showapi_sign=3cfdb251b248451792b7d99fd9d05fdc&keyword=一');
+		xhr.open('get','http://route.showapi.com/341-2?showapi_appid=38010&showapi_sign=3cfdb251b248451792b7d99fd9d05fdc&page=10&maxResult=10');
+		xhr.send(null);
+	</script>
+</body>
+</html>

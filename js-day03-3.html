@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		parseInt();
+		var n = 2;
+		console.log(n.toString());
+	</script>
+	<script>
+		var str = "这是一个字符串";
+		console.log(str);
+		console.log(encodeURI(str));
+
+		var str1 = "abc def";
+		console.log(encodeURI(str1));
+	</script>
+
+	<script>
+		var str2 = "你 我 他";
+		var en = encodeURI(str2);
+		console.log(en);
+
+		console.log(decodeURI(en));
+	</script>
+	<script>
+		var str3 = "console.log(123)";
+		eval(str3);
+	</script>
+	<script>
+		// 1+2*3
+		var cal = "var res = " + prompt("请输入算式");
+		console.log(cal);// var res = 1+2*3
+		eval(cal);
+		console.log(res);
+	</script>
+</body>
+</html>

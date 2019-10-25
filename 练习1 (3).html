@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 400px;
+			height: 300px;
+			border:2px solid black;
+			position: relative;
+			overflow: hidden;
+		}
+		.box div{ 
+			width: 240px;
+			height: 300px;
+			font-size:50px;
+			font-weight: bold;
+			text-align: center;
+			position: absolute;
+			top:0;
+		}
+		.left{
+			left:0;
+			background-color: #f00a;
+			animation:slideLeft 1.5s linear infinite alternate;
+			z-index: 1;
+		}
+		.right{
+			right:0;
+			background-color: #0f0a;
+			animation:slideRight 1.5s linear infinite alternate;
+			z-index: 2;
+		}
+		@keyframes slideLeft{
+			from{
+				left:0;
+			}
+			50%{
+				left:-50px;
+			}
+			to{
+				left:0;
+				z-index: 2;
+			}
+		}
+		@keyframes slideRight{
+			from{
+				right:0;
+			}
+			50%{
+				right:-50px;
+			}
+			to{
+				right:0;
+				z-index: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="left">LEFT</div>
+		<div class="right">RIGHT</div>
+	</div>
+</body>
+</html>

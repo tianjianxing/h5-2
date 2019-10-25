@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img id="i1" src="1.jpg" alt="">
+	<script>
+		var i1 = document.all.i1;
+		console.log(i1);
+		i1.src = "2.jpg";
+		// i1.width = "300";
+		i1.height = "300";
+		// i1.style.width = "30%";
+
+		var i2 = new Image();
+		i2.src = "3.jpg";
+		console.log(i2);
+
+		document.body.appendChild(i2);
+
+		var i3 = document.createElement('img');
+		i3.src = "1.jpg";
+		i3.width = "400";
+		document.body.appendChild(i3);
+	</script>
+	<table id="t1" border="1">
+		<tr>
+			<td>0001</td>
+			<td>32231</td>
+			<td>33</td>
+			<td>2341</td>
+		</tr>
+		<tr>
+			<td>0001</td>
+			<td>1234</td>
+			<td>1234</td>
+			<td>0004</td>
+		</tr>
+		<tr>
+			<td>0001</td>
+			<td>1234</td>
+			<td>0003</td>
+			<td>1234</td>
+		</tr>
+		<tr>
+			<td>024312001</td>
+			<td>0002</td>
+			<td id="tdd">01234003</td>
+			<td>0004</td>
+		</tr>
+	</table>
+	<script>
+		var t1 = document.all.t1;
+		console.log(t1);
+		console.log(t1.rows);
+
+		var tr1 = t1.insertRow(1);
+		console.log(tr1);
+
+		t1.deleteRow(2);
+
+		// console.log(tr1.rowIndex);
+		// console.log(t1.rows[2].cells);
+
+		// var td1 = tr1.insertCell(0);
+		// td1.textContent = "abc";
+		// var td2 = tr1.insertCell(1);
+		// td2.textContent = "ccc";
+		// var td3 = tr1.insertCell(2);
+		// td3.textContent = "td3";
+
+		// t1.rows[2].deleteCell(1);
+
+		// var tdd = document.all.tdd;
+		// console.log(tdd.cellIndex);
+		// tdd.colSpan = 2;
+		// t1.rows[3].deleteCell(3);
+
+		// t1.rows[1].cells[0].rowSpan = 2;
+		// t1.rows[2].deleteCell(0);
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

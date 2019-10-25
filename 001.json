@@ -1,0 +1,26 @@
+{
+	"province":[
+		{
+			"name":"河北",
+			"position":"华北"
+		},
+		{
+			"name":"山东",
+			"position":"华北",
+			"cities":[
+				{
+					"city":"济南",
+					"peopleNum":9999
+				},
+				{
+					"city":"德州",
+					"peopleNum":8888
+				}
+			]
+		},
+		{
+			"name":"黑龙江",
+			"postion":"东北"
+		}
+	]
+}

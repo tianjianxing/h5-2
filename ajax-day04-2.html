@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-3.4.1.js"></script>
+	<script src="jquery.validate.js"></script>
+</head>
+<body>
+	<form id="f1">
+		用户名: <input type="text" name="username">
+		<br>
+		密码：<input type="password" name="pwd">
+		<br> 
+		<input type="button" value="提交" class="submitBtn">
+	</form>
+	<script>
+		$(".submitBtn").click(function(){
+			var para = $("#f1").serializeArray();
+			console.log(para);
+			$.ajax({
+				url:"loginTest-reg.php",
+				data:para,
+				success:function(res){
+					console.log(res);
+				}
+			})
+		})
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<form id="f2">
+		用户名：<input type="text" name="username">
+		<br>
+		密码：<input type="password" name="pwd" id="pwd">
+		<br>
+		确认密码：<input type="password" name="rpwd">
+		<br>
+		<input type="submit">
+	</form>
+	<script>
+		$("#f2").validate({
+			submitHandler:function(form){
+				var para = $(form).serialize();
+				$.ajax({
+					url:"loginTest-reg.php",
+					data:para,
+					success:function(res){
+						console.log(res);
+					}
+				})
+			},
+			rules:{
+				username:{
+					required:true,
+					rangelength:[3,6]
+				},
+				pwd:{
+					required:true,
+					rangelength:[8,16]
+				},
+				rpwd:{
+					equalTo:"#pwd"
+				}
+			},
+			messages:{
+				username:{
+					required:"必填",
+					rangelength:"最少长度为${0},最大长度为${1}"
+				},
+				pwd:{
+					required:"这也是必填的",
+					rangelength:"最少${0}，最多${1}"
+				},
+				rpwd:{
+					equalTo:"两次输入的不一样"
+				}
+			}
+		})
+	</script>
+	<br>
+	<br>
+	<form id="f3">
+		用户名：<input type="text" name="username">
+		<br>
+		密码：<input type="password" name="pwd">
+		<br>
+		<input type="submit" value="登录">
+	</form>
+	<br>
+	<div class="box"></div>
+	<script>
+		$("#f3").validate({
+			submitHandler:function(form){
+				var para = $(form).serialize();
+				$.ajax({
+					url:"loginTest-login.php",
+					data:para,
+					dataType:'json',
+					success:function(res){
+						console.log(res);
+						$('.box').text(res.uname+",欢迎你！");
+					}
+				})
+			},
+			rules:{
+				username:{
+					required:true,
+					rangelength:[3,6]
+				},
+				pwd:{
+					required:true,
+					rangelength:[8,16]
+				}
+			},
+			messages:{
+				username:{
+					required:"必填",
+					rangelength:"最少长度为${0},最大长度为${1}"
+				},
+				pwd:{
+					required:"这也是必填的",
+					rangelength:"最少${0}，最多${1}"
+				}
+			}
+		})
+	</script>
+	<br>
+	<br>
+	<form action="loginTest-reg.php" method="get" enctype="application/x-www-form-urlencoded" id="f4">
+		<input type="text" name="username" required>
+		<br>
+		<input type="password" name="pwd">
+		<br>
+		<input type="submit">
+	</form>
+	<br>
+	<!-- http://1.51.177.70:8888/formTest/loginTest-login.php -->
+	<!-- http://1.51.177.70:8888/formTest/loginTest-reg.php -->
+</body>
+</html>

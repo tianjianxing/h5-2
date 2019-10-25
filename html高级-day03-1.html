@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pB6l76x1Ez0zhGFghyFpqlA08vtxHsgp"></script>
+</head>
+<body>
+	<script>
+		// navigator.geolocation.getCurrentPosition(function(p){
+		// 	console.log(JSON.stringify(p));
+		// },function(err){
+		// 	console.log(err);
+		// },{})
+	</script>
+	<style>
+		#map{
+			width: 500px;
+			height: 400px;
+			border:1px solid red;
+		}
+	</style>
+	<div id="map"></div>
+	<script>
+		var map = new BMap.Map('map');
+
+		var point = new BMap.Point(117.175584,34.241947);
+		map.centerAndZoom(point,12);
+
+		map.addControl(new BMap.NavigationControl());
+		map.addControl(new BMap.ScaleControl());
+		map.addControl(new BMap.GeolocationControl());
+		map.enableScrollWheelZoom();
+		map.disableContinuousZoom();
+		map.disableInertialDragging();
+	</script>
+</body>
+</html>

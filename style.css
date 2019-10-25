@@ -1,0 +1,160 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:14px;
+}
+body{
+	background-color: #efefef;
+}
+a{
+	color:blue;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+	color:red;
+}
+header{
+	background-color: #f9f9f9;
+	height:30px;
+	line-height: 30px;
+}
+header .centerBox{
+	width: 1000px;
+	margin:auto;
+}
+header .collectJD{
+	width: 20%;
+	display:inline-block;
+}
+header .collectJD a{
+	background-image: url(star.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left:20px;
+}
+header nav{
+	width: 80%;
+	display:inline-block;
+	text-align: right;
+}
+header nav a{
+	padding:0 8px;
+}
+header .siteNav{
+	display:inline-block;
+	width: 80px;
+}
+header .siteNav>a{
+	background-image: url(jt_down.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+header .siteNav table{
+	background-color:white;
+	border:1px solid #333;
+	width: 220px;
+	text-align: center;
+	margin-left:-140px;
+	display:none;
+}
+header .siteNav:hover table{
+	display:table;
+}
+header .siteNav:hover>a{
+	background-image: url(jt_up.jpg);
+}
+
+section{
+	width: 1000px;
+	margin:50px auto 0;
+}
+section .tags{
+	margin-top:50px;
+	margin-bottom:7px;
+	text-align: center;
+}
+section .tags a{
+	background-color: #efefef;
+	border:1px solid #d5d5d5;
+	border-bottom:none;
+	padding:8px 6px;
+}
+section .tags .active,section .tags a:hover{
+	background-color: #fff;
+	padding-top:12px;
+	color:red;
+	text-decoration: none;
+}
+section form{
+	margin:auto;
+	background-color: #fff;
+	border:1px solid #d5d5d5;
+	padding:20px 30px;
+}
+section table{
+	width:100%;
+}
+section table td:first-child:not(:empty)::before{
+	content:"*";
+	color:red;
+}
+section table td:first-child{
+	text-align: right;
+	height:40px;
+}
+section .hasBgi{
+	width: 70%;
+	height:24px;
+	background-image: url(user.jpg);
+	background-repeat: no-repeat;
+	background-position: right 4px center;
+	border:1px solid #d5d5d5;
+	padding-right:28px;
+}
+section .bgiPhone{
+	background-image: url(phone.jpg);
+}
+section .bgiPwd{
+	background-image: url(pwd.jpg);
+}
+section table p{
+	background-color: #f1f1f1;
+	border:1px solid #d5d5d5;
+	padding:4px;
+}
+section .msgCode [type=text]{
+	width: 100px;
+	height: 24px;
+	vertical-align: middle;
+}
+section .msgCode [type=button]{
+	height: 28px;
+	border:1px solid #d5d5d5;
+	background-color: #f1f1f1;
+	vertical-align: middle;
+	padding:0 5px;
+}
+section table [type=submit]{
+	width: 80%;
+	height: 40px;
+	border:none;
+	background-image: url(regist_btn.jpg);
+	background-position: center;
+	border-radius: 5px;
+}
+section table [type=submit]:hover{
+	background-image: url(regist_btn_hove.jpg);
+}
+
+footer{
+	text-align: center;
+	margin-top:60px;
+}
+footer a{
+	padding:0 6px;
+	border-right:1px solid #d5d5d5;
+}
+footer p a:last-child{
+	border:none;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			border:2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="800px" height="600px"></canvas>
+	<script>
+		var c1 = document.querySelector('canvas');
+		var ctx = c1.getContext('2d');
+		ctx.fillRect(20,20,100,80);
+		ctx.strokeRect(20,120,100,80);
+
+		ctx.clearRect(50,50,20,20);
+		ctx.clearRect(0,100,40,40);
+
+		ctx.strokeStyle = "red";
+		ctx.strokeRect(20,220,100,80);
+		ctx.fillStyle = "blue";
+		ctx.fillRect(20,320,100,80);
+
+		ctx.globalAlpha = 0.5;
+		ctx.fillRect(20,420,100,80);
+
+		ctx.globalAlpha = 1;
+		var lg = ctx.createLinearGradient(140,20,240,100);
+		lg.addColorStop(0,"red");
+		lg.addColorStop(1,"blue");
+
+		ctx.strokeStyle = lg;
+		ctx.strokeRect(140,20,100,80);
+	</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script>
+		var x = 1;
+		function fun1(){
+			var x = 2;
+			console.log(x);
+		}
+		fun1();
+		console.log(x);
+	</script> -->
+
+	<!-- <script>
+		var y = 1,z;
+		function fun2(){
+			z = 3;//任何位置都未声明的变量，默认为全局变量
+			// var y = 2;
+			console.log(y);
+		}
+		fun2();
+		y = 5;
+		console.log(y,z);
+	</script> -->
+	<script>
+		// console.log(m);
+		// var m = 1;
+		// console.log(m);
+
+		// var m;
+		// console.log(m);
+		// m = 1;
+		// console.log(m);
+	</script>
+	<!-- <script>
+		
+		function fun3(){
+			console.log("fun3");
+		}
+		fun3();
+	</script>
+	<script src="js-day03-2.js"></script>
+	<script>
+		fun5();
+	</script> -->
+
+	<!-- <script>
+		function fun6(){
+			console.log(x);
+			var x = 3;
+			console.log(x);
+		}
+		fun6();
+
+		function fun7(){
+			var x;
+			console.log(x);
+			x = 3;
+			console.log(x);
+		}
+		fun7();
+	</script> -->
+
+	<!-- <script>
+		var y = 3;
+		function fun8(){
+			var y = 2;
+			function fun9(){
+				console.log("fun9"+y);
+			}
+			fun9();
+		}
+		fun8();
+	</script> -->
+
+	<!-- <script>
+		function fun10(){
+
+		}
+		var fun11 = function(){
+			console.log(1111);
+		}
+		fun11();
+	</script> -->
+
+	<script>
+		var fun13;
+		fun12();
+		fun13();
+        //此时fun13（）无法输出，因为此时fun13还不是一个函数，是一个变量。当fun13（）放到最后，fun13（）经过定义后已经变成了一个函数，可以被调用了。
+		function fun12(){
+			console.log(12);
+		}
+		fun13 = function(){
+			console.log(13);
+		}
+
+
+	</script>
+
+	<script>
+		var x = 1;
+		function fun14(x)//如果此处为x，则下面的x=8相当于var x = 8,属于局部变量。如果此处换成y，下面的x则变成了全部变量。
+		{
+			x = 8;
+			console.log(x);
+		}
+		fun14(5);
+		console.log(x);
+	</script>
+
+	<script>
+		function fun15(y=8){
+			console.log(y);
+		}
+		fun15(1);
+	</script>
+</body>
+</html>

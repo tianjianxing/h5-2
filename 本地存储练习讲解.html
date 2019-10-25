@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<textarea></textarea>
+	<br>
+	<input type="button" value="保存" class="saveBtn">
+	<input type="button" value="删除" class="delBtn">
+	<input type="button" value="全部删除" class="delAllBtn">
+	<ul></ul>
+	<script>
+
+
+		var content = $('textarea'),
+			saveBtn = $('.saveBtn'),
+			delBtn = $('.delBtn'),
+			delAllBtn = $('.delAllBtn'),
+			list = $('ul');
+
+		for(var i = 0;i < localStorage.length;i++){
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			var li = $('<li><input type="checkbox" class="'+key+'" /> '+value+'</li>');
+			list.append(li);
+		}
+		saveBtn.click(function(){
+			if(content.val()){
+				var d = new Date().getTime();
+				var v = content.val();
+				localStorage.setItem(d,v);
+				content.val('');
+
+				var li = $('<li><input type="checkbox" class="'+d+'" /> '+v+'</li>');
+				list.append(li);
+			}
+		})
+
+		delBtn.click(function(){
+			$(':checked').each(function(){
+				var k = this.className;
+				console.log(k);
+				localStorage.removeItem(k);
+				$(this).parent().remove();
+			})
+		})
+
+		delAllBtn.click(function(){
+			localStorage.clear();
+			list.html('');
+		})
+	</script>
+</body>
+</html>

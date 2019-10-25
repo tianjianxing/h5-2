@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pB6l76x1Ez0zhGFghyFpqlA08vtxHsgp"></script>
+</head>
+<body>
+	<div id="map" style="width:800px;height:500px;"></div>
+	<script>
+		var map = new BMap.Map('map');
+		var geo = new BMap.Geolocation();
+
+		geo.getCurrentPosition(function(p){
+			console.log(p);
+			var point = p.point;
+			console.log(point);
+			// map.centerAndZoom(point,16);
+		})
+
+		var gc = new BMap.Geocoder();
+		gc.getPoint("德州学院",function(p){
+			console.log(p);
+			if(p){
+				map.centerAndZoom(p,16);
+				map.addOverlay(new BMap.Marker(p));
+			}else{
+				alert("没找到");
+			}
+		},'德州市')
+	</script>
+	<div id="map1" style="width:600px;height:400px;"></div>
+	<script>
+		var map1 = new BMap.Map("map1");
+		map1.centerAndZoom(new BMap.Point(116.339249, 37.476083),15);
+		var local = new BMap.LocalSearch(map1,{
+			renderOptions:{map:map1}
+		})
+		local.search("景点");
+	</script>
+</body>
+</html>

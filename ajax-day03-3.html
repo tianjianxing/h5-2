@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		ul,ol{
+			list-style-type: none;
+		}
+		li{
+			border:2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<!-- <ul></ul>
+	<script>
+		var ul = document.querySelector('ul');
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				var res = xhr.responseText;
+				// console.log(res);
+				var resObj = JSON.parse(res);
+				console.log(resObj);
+				var clist = resObj.showapi_res_body.contentlist;
+				console.log(clist);
+				for(var i in clist){
+					var li = document.createElement('li');
+					li.innerHTML = '<h3>'+clist[i].title+' <span>'+clist[i].ct+'</span></h3>\
+					<p>'+clist[i].text+'</p>';
+					ul.appendChild(li);
+				}
+				
+			}
+		}
+		xhr.open('get','http://route.showapi.com/341-1?showapi_appid=38010&showapi_sign=3cfdb251b248451792b7d99fd9d05fdc');
+		xhr.send(null);
+	</script> -->
+
+	<ol></ol>
+	<script>
+		var ol = document.querySelector('ol');
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				var res = xhr.responseText;
+				var resObj = JSON.parse(res);
+				console.log(resObj);
+
+				var list = resObj.showapi_res_body.contentlist;
+				for(var i in list){
+					var li = document.createElement('li');
+					li.innerHTML = '<li>\
+							<h3>'+list[i].title+' <span>'+list[i].ct+'</span></h3>\
+							<img src="'+list[i].img+'" alt="">\
+						</li>';
+					ol.appendChild(li);
+				}
+			}
+		}
+		xhr.open('get','http://route.showapi.com/341-2?showapi_appid=38010&showapi_sign=3cfdb251b248451792b7d99fd9d05fdc');
+		xhr.send(null);
+	</script>
+
+	<script>
+		var obj = {
+			a:1,
+			b:2,
+			c:[1,2,3]
+		}
+		var str = JSON.stringify(obj);
+		console.log(str);
+	</script>
+</body>
+</html>

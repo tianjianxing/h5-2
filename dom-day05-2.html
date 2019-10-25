@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: #f00;
+		}
+	</style>
+	<div class="box"></div>
+	<script>
+		var box = document.querySelector(".box");
+		box.onclick = function(){
+			var e = window.event || arguments[0];
+			// console.log(e.clientX,e.clientY);
+			// console.log(e.x,e.y);
+			// console.log(e.pageX,e.pageY);
+			// console.log(e.screenX,e.screenY);
+			console.log(e.offsetX,e.offsetY);
+		}
+
+		// window.onscroll = function(){
+		// 	var top = document.documentElement.scrollTop || document.body.scrollTop;
+		// 	console.log(top);
+		// 	if(top >= 200){
+		// 		console.log("9999999999");
+		// 	}
+		// }
+	</script>
+	<input type="button" value="to200" id="btn1">
+	<!-- <script>
+		var btn1 = document.all.btn1;
+		btn1.onclick = function(){
+			document.documentElement.scrollTop = 200;
+		}
+	</script> -->
+	<br>
+	<br>
+	<style>
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+			border:10px solid blue;
+			padding-left:5px;
+			overflow:auto;
+		}
+	</style>
+	<div class="box1">
+		<br>
+		1
+		<br>
+		<br>
+		<br>
+		2
+		<br>
+		<br>
+		<br>
+		3
+		<br>
+		<br>
+		4
+		<br>
+	</div>
+	<br>
+	<script>
+		var box1 = document.querySelector('.box1');
+		console.log(box1.offsetWidth);
+		console.log(box1.clientWidth);
+		console.log(box1.clientLeft,box1.clientTop);
+
+		box1.onscroll = function(){
+			console.log(box1.scrollTop);
+		}
+		box1.scrollTop = 50;
+	</script>
+	<br>
+	<style>
+		.box2{
+			width: 400px;
+			height: 400px;
+			background-color: #00f;
+			position: relative;
+		}
+		.box3{
+			width: 200px;
+			height: 200px;
+			background-color: #0ff;
+			position: absolute;
+			overflow: auto;
+		}
+	</style>
+	<div class="box2">
+		<div class="box3">9999999999999999999999999999999999999</div>
+	</div>
+	<script>
+		var box3 = document.querySelector('.box3');
+		console.log(box3.offsetTop);
+
+		box3.onscroll = function(){
+			console.log(this.scrollLeft);
+		}
+		box3.scrollLeft = 500;
+	</script>
+	<br>
+	<br>
+	<br>
+	<input type="button" value="按钮" id="btn3">
+	<script>
+		var btn3 = document.all.btn3;
+		btn3.onclick = function(){
+			console.log('click');
+		}
+		btn3.onclick = function(){
+			console.log("click111");
+		}
+		btn3.onclick = null;
+
+	</script>
+	<br>
+	<style>
+		.d1{
+			width: 400px;
+			height: 400px;
+			background-color: #f00;
+		}
+		.d2{
+			width: 300px;
+			height: 300px;
+			background-color: #0f0;
+		}
+		.d3{
+			width: 200px;
+			height: 200px;
+			background-color: #00f;
+		}
+	</style>
+	<div class="d1">
+		<div class="d2">
+			<div class="d3"></div>
+		</div>
+	</div>
+	<script>
+		var d1 = document.querySelector('.d1');
+		var d2 = document.querySelector('.d2');
+		var d3 = document.querySelector('.d3');
+		function fun(){
+			console.log(this);
+		}
+		function fun1(){
+			console.log("fun1");
+		}
+		d1.addEventListener('click',fun,false);
+		d2.addEventListener('click',fun,false);
+		d2.addEventListener('click',fun1,false);
+		d3.addEventListener('click',fun,false);
+		d1.addEventListener('click',fun,true);
+		d2.addEventListener('click',fun,true);
+		d3.addEventListener('click',fun,true);
+
+		d2.removeEventListener('click',fun,false);
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body> 
+</html>

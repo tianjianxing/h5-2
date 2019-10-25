@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="i1" value="123">
+	<input type="button" value="按钮" onclick="fun1()">
+	<script>
+		var i1 = document.all.i1;
+		
+		i1.value = "新设置的值";
+		function fun1(){
+			console.log(i1.value);
+		}
+	</script>
+	<br>
+	<input type="text" id="i2" onblur="fun2(this)" onfocus="fun3()">
+	<input type="button" value="按钮1" onclick="fun4()">
+	<input type="button" value="按钮2" onclick="fun5()">
+	<script>
+		function fun2(ele){
+			console.log("失去焦点了");
+			console.log(ele.value);
+		}
+		function fun3(){
+			console.log("获得焦点了");
+		}
+
+		function fun4(){
+			document.all.i2.focus();
+		}
+		function fun5(){
+			document.all.i2.blur();
+		}
+	</script>
+	<!-- <br>
+	<input type="text" id="i3" onselect="fun6()" onfocus="fun7()">
+	<input type="button" value="按钮3" onclick="fun7()">
+	<script>
+		function fun6(){
+			console.log("选中文本");
+		}
+		function fun7(){
+			document.all.i3.select();
+		}
+	</script>
+	<br>
+	<input type="text" oninput="fun8(this)">
+	<script>
+		function fun8(ele){
+			console.log(ele.value.length);
+			if(ele.value.length > 12){
+				ele.blur();
+			}
+		}
+	</script>
+	<br>
+	<input type="password" name="" id="" oninput="fun9(this)">
+	<script>
+		function fun9(ele){
+			console.log(ele.value);
+		}
+	</script>
+	<br>
+	<input type="checkbox" id="chk1" onclick="fun11(this)">
+	<input type="button" value="按钮1" onclick="fun10()">
+	<script>
+		var chk1 = document.all.chk1;
+		// chk1.checked = true;
+		function fun10(){
+			chk1.checked = !chk1.checked;
+		}
+		function fun11(ele){
+			console.log(ele.checked);
+		}
+	</script>
+	<input type="button" value="0" onclick="fun12(this)">
+	<script>
+		function fun12(ele){
+			// ele.value++;
+			ele.value = parseInt(ele.value) + 1;
+		}
+	</script>
+	<ul id="u1"></ul>
+	<input type="button" value="按钮" onclick="fun13()">
+	<script>
+		var arr = [1,2,3,4,5];
+		var u1 = document.all.u1;
+		function fun13(){
+			for(var i = 0;i < arr.length;i++){
+				// var li = document.createElement('li');
+				// li.textContent = arr[i];
+				// u1.appendChild(li);
+
+
+				var li = "<li>"+arr[i]+"</li>";
+				u1.innerHTML += li;
+			}
+		}
+
+		var url = "http://www.baidu.com/";
+		var num = 999;
+		var abc = '<p class="p1">\
+						<span>'+num+'</span>\
+						<a href="'+url+'">aaa</a>\
+						<b><i>asfsa;l</i></b>\
+					</p>';
+		var str = "abasdfasfasfasfsaf";
+	</script> -->
+	
+</body>
+</html>

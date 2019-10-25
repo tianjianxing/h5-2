@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		<b>BBBBB</b>
+	</div>
+	<script>
+		var p1 = document.createElement("p");
+		console.log(p1);
+		var t1 = document.createTextNode("这是创建的文本");
+		console.log(t1);
+
+		var box = document.all.box;
+		box.appendChild(p1);
+		p1.appendChild(t1);
+
+		var s1 = document.createElement('span');
+		var b1 = document.querySelector("#box b");
+		box.insertBefore(s1,b1);
+	</script>
+	<div id="box1">
+		<a href="">aaaa</a>
+	</div>
+	<script>
+		// var p2 = document.createElement('p');
+		// var b2 = document.createElement('b');
+		// var s2 = document.createElement('s');
+		// var bc = document.createTextNode('bbbb');
+		// var sc = document.createTextNode('ssss');
+		// b2.setAttribute("class","b1");
+		// b2.appendChild(bc);
+		// s2.appendChild(sc);
+		// p2.appendChild(b2);
+		// p2.appendChild(s2);
+		// console.log(p2);
+		// var box1 = document.all.box1;
+		// box1.appendChild(p2);
+
+		var box1 = document.all.box1;
+		var p2 = document.createElement('p');
+		p2.innerHTML = "<b class='b1'>bbbb</b><s>ssss</s>";
+		box1.appendChild(p2);
+	</script>
+	<div id="d1">
+		<a href="">aaa</a>
+	</div>
+	<script>
+		var d1 = document.all.d1;
+		// d1.innerHTML += "<p>pppp</p>";
+		d1.innerHTML = "<p>ooooo</p>" + d1.innerHTML;
+	</script>
+	<div id="box2"></div>
+	<script>
+		var box2 = document.all.box2;
+		var aa = document.createElement('a');
+		var bb = document.createElement('b');
+		bb.textContent = "asdfafafsa";
+		var ss = document.createElement('s');
+		var ff = document.createDocumentFragment();
+		ff.appendChild(aa);
+		ff.appendChild(bb);
+		ff.appendChild(ss);
+		box2.appendChild(ff);
+	</script>
+	<div id="box3">
+		<s>s1111</s>
+		<a href="">aaa</a>
+		<s>sss <i>iii</i></s>
+		<span>asdfafd</span>
+	</div>
+	<script>
+		var box3 = document.all.box3;
+		var sss = document.querySelectorAll("#box3 s")[1];
+
+		box3.removeChild(sss);
+
+		var u = document.createElement('u');
+		u.textContent = "UUUUU";
+		box3.replaceChild(u,box3.lastElementChild);
+	</script>
+</body>
+</html>

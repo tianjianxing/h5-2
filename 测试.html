@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      border:1px solid black;
+    }
+    body{
+      display:flex;
+      flex-direction: column;
+      height:100vh;
+    }
+    header{
+      height: 50px;
+      display:flex;
+    }
+    .goBack{
+      width: 60px;
+      line-height: 50px;
+      text-align: center;
+    }
+    .title{
+      flex-grow:1;
+      text-align: center;
+      line-height: 50px;
+    }
+    .nextStep{
+      width: 60px;
+      text-align: center;
+      line-height: 50px;
+    }
+    section{
+      flex-grow:1;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    footer{
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="goBack">返回</div>
+    <div class="title">首页</div>
+    <div class="nextStep">下一步</div>
+  </header>
+  <section>
+    这里是内容
+  </section>
+  <footer>
+    确定
+  </footer>
+</body>
+</html>

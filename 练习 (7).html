@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		<div id="d1">
+			<p class="p1" name="pp"></p>
+			<p class="p2" name="pp"></p>
+			<p class="p3" name="pp"></p>
+		</div>
+		<div id="d2">
+			<h3></h3>
+			<p name="pp">一些文字<b id="b1" name="b2">加粗</b></p>
+		</div>
+		<div id="d3">
+			<p class="p1" name="pp"></p>
+			<p class="p2" name="pp"></p>
+			<p class="p3" name="pp"></p>
+		</div>
+		<div id="d4">
+			<p class="p4" name="pp" id="p5">
+				<b>AAA</b>
+				<i class="i1" id="i2">III</i>
+			</p>
+		</div>
+	</div>
+
+	<script>
+		var w1 = document.getElementsByClassName("p2");
+		console.log(w1);
+
+		var w2 = document.querySelector("#d2 b");
+		console.log(w2);
+		var w3 = document.all.b1;
+		console.log(w3);
+		var w4 = document.getElementsByName("b2");
+		console.log(w4);
+
+		var w5 = document.getElementsByClassName("i1");
+		console.log(w5);
+		var w6 = document.all.i2;
+		console.log(w6);
+		var w7 = document.querySelector(".p4 i");
+		console.log(w7);
+
+		var w8 = document.getElementsByName("pp");
+		console.log(w8);
+		var w9 = document.querySelectorAll("p");
+		console.log(w9);
+
+		var w10 = document.all.d4;
+		console.log(w10);
+		var w11 = document.querySelector("#d4");
+		console.log(w11);
+		var w12 = document.getElementById("d4");
+		console.log(w12);
+		var w13 = document.getElementById("p5");
+		console.log(w13.parentElement);
+	</script>
+	
+	<script>
+		//找到所有class=p2的p元素
+
+		//3种方法找到div#d2下的b元素
+
+		//3种方法找到i元素
+
+		//2种方法输出页面中p元素的个数
+
+		//4种方法找到div#d4
+	</script>
+</body>
+</html>

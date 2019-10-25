@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function fun1(){
+			console.log("这是一个函数");
+		}
+		fun1();
+		console.log(999);
+		fun1();
+	</script>
+	<script>
+		function fun2(x){
+			console.log("参数是："+x);
+		}
+		fun2(5);
+		fun2(8);
+		var a = 10;
+		fun2(a);
+		fun2("abc");
+	</script>
+
+	<!-- <script>
+		function fun3(x){
+			x++;
+			console.log(x);
+		}
+		var m = 8;
+		fun3(m);
+		console.log(m);
+	</script> -->
+
+	<!-- <script>
+		function fun4(x,y){
+			// console.log(x+y);
+			return x+y;
+		}
+		var res = fun4(5,6);
+		console.log(res);
+
+		console.log(fun4(1,2)+3);
+
+		console.log(parseInt(123.34));
+
+	</script>
+
+	<script>
+		function fun5(x,y){
+			if(x>y){
+				return x - y;
+			}else{
+				return y - x;
+			}
+		}
+		console.log(fun5(10,8));
+	</script> -->
+</body>
+</html>

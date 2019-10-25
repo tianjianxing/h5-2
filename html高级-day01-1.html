@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		<input type="email">
+		<br>
+		<input type="search">
+		<br>
+		<input type="url">
+		<br>
+		<input type="tel">
+		<br>
+		<input type="number" min="10" max="20" step="2">
+		<br>
+		<input type="range" min="10" max="50" value="20" step="5">
+		<br>
+		<input type="color">
+		<br>
+		<input type="date">
+		<br>
+		<input type="week">
+		<br>
+		<input type="month">
+		<br>
+		<input type="time">
+		<br>
+		<input type="submit">
+	</form>
+	<script>
+		var range = document.querySelector('[type=range]');
+		range.onchange = function(){
+			console.log(this.value);
+		}
+
+		var color = document.querySelector('[type=color]');
+		color.onchange = function(){
+			console.log(this.value);
+		}
+
+		var date = document.querySelector('[type=date]');
+		date.onchange = function(){
+			console.log(this.value);
+		}
+	</script>
+
+	<input type="text" list="dl">
+	<datalist id="dl"> 
+		<option value="abc"></option>
+		<option value="abde"></option>
+		<option value="abcde"></option>
+		<option value="bc"></option>
+		<option value="cd"></option>
+		<option value="def"></option>
+		<option value="ef"></option>
+		<option value="abcdef"></option>
+		<option value="一二三"></option>
+		<option value="二三四"></option>
+	</datalist>
+	<br>
+	<progress max="50" value="15"></progress>
+	<br>
+	<meter min="0" max="100" value="60" low="20" high="80" optimum="60"></meter>
+
+	<br>
+	<form>
+		<input type="email" multiple>
+		<br>
+		<input type="file" multiple>
+		<br>
+		<input type="submit">
+	</form>
+	<br><br>
+	<form action="">
+		<input type="text" tabindex="1">
+		<br>
+		<input type="passowrd" tabindex="3">
+		<br>
+		<input type="email" tabindex="1">
+		<br>
+		<input type="url" tabindex="1">
+		<br>
+		<input type="button" tabindex="-1">
+		<br>
+		<input type="submit" tabindex="5">
+	</form>
+
+	<br>
+	<form action="" id="f1">
+		<input type="text">
+		<br>
+		<input type="password">
+		<br>
+		<input type="submit">
+	</form>
+	<br>
+	<br>
+	<br>
+	<input type="email" form="f1">
+	<br>
+</body>
+</html>

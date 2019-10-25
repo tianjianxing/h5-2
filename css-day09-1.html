@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		@keyframes anim{
+			0%{
+				width: 100px;
+			}
+			100%{
+				width: 400px;
+			}
+		}
+		.box{
+			width: 50px;
+			height: 50px;
+			border:2px solid black;
+			background-color: #f00;
+			/*animation-name:anim;
+			animation-duration:2s;
+			animation-timing-function: linear;
+			animation-delay:1s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;*/
+			/*animation:anim 2s linear 1s infinite alternate;*/
+			animation:anim 2s 1s 3;/*duration:2s,delay:1s,count:3*/
+		}
+	</style>
+	<div class="box"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<style>
+		@-webkit-keyframes a2{
+			from{
+				width: 200px;
+				height: 100px;
+				background-color: #f00;
+			}
+			to{
+				width: 400px;
+				height: 200px;
+				background-color: #0f0;
+			}
+		}
+		@keyframes a2{
+			from{
+				width: 200px;
+				height: 100px;
+				background-color: #f00;
+			}
+			to{
+				width: 400px;
+				height: 200px;
+				background-color: #0f0;
+			}
+		}
+		.box1{
+			width: 50px;
+			height: 50px;
+			background-color: #00f;
+			animation:a2 2s 1s;
+			animation-fill-mode: both;
+		}
+	</style>
+	<div class="box1"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

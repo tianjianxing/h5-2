@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		<input type="text" pattern="^1[3-9]\d{9}$">
+		<br>
+		<input type="submit">
+	</form>
+	<br>
+	<br>
+	<style>
+		video{
+			border:2px solid red;
+		}
+	</style>
+	<video src="video.mp4" autoplay controls height="300px" width="200px" poster="1.jpg" loop></video>
+	<br>
+	<br>
+	<video controls height="300px">
+		<source src="v1.mp4">
+		<source src="video.mp4">
+	</video>
+	<br>
+	<br>
+	<video src="video.mp4" class="v1" height="300px" controls></video>
+	<br>
+	<script>
+		var v1 = document.querySelector('.v1');
+		v1.oncanplaythrough = function(){
+			console.log("canplaythrough");
+		}
+		v1.oncanplay = function(){
+			console.log('canplay');
+		}
+		v1.onended = function(){
+			console.log("ended");
+		}
+		v1.onpause = function(){
+			console.log("pause");
+		}
+		v1.onplay = function(){
+			console.log('play');
+		}
+	</script>
+	<br>
+	<br>
+	<video src="video.mp4" height="400px" class="v2" controls></video>
+	<input type="button" value="开始" class="startBtn">
+	<input type="button" value="暂停" class="pauseBtn">
+	<input type="button" value="设置音量" class="vBtn">
+	<script>
+		var v2 = document.querySelector(".v2");
+		var pauseBtn = document.querySelector('.pauseBtn');
+		var startBtn = document.querySelector('.startBtn');
+		var vBtn = document.querySelector(".vBtn");
+		v2.oncanplaythrough = function(){
+			v2.play();
+			console.log(v2.duration);
+		}
+		pauseBtn.onclick = function(){
+			v2.pause();
+			console.log(v2.paused);
+			console.log(v2.currentTime);
+		}
+		startBtn.onclick = function(){
+			v2.play();
+			console.log(v2.paused);
+			console.log(v2.volume);
+			console.log(v2.muted);
+		}
+		console.log(v2.canPlayType('video/ogg'));
+		vBtn.onclick = function(){
+			v2.volume = 0.5;
+		}
+	</script>
+	<br>
+</body>
+</html>

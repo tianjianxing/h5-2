@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//https://www.apiopen.top/weatherApi
+		var xhr = new XMLHttpRequest();
+		console.log(xhr.readyState);
+		xhr.onreadystatechange = function(){
+			console.log(xhr.readyState);
+			if(xhr.readyState == 4){
+				console.log(xhr.responseText);
+				console.log(xhr.status);
+				console.log(xhr.statusText);
+			}
+		}
+		xhr.open('get','https://www.apiopen.top/weatherApi?city=德州');
+		xhr.send(null);
+	</script>
+</body>
+</html>

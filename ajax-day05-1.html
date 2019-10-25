@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-3.4.1.js"></script>
+</head>
+<body>
+	<script>
+		//服务端设置header进行跨域访问
+		$.ajax({
+			url:"http://1.51.177.70:8888/formTest/jsonpTest1.php",
+			type:'get',
+			data:{
+				username:"abc",
+				pwd:'123'
+			},
+			success:function(res){
+				console.log(res);
+			}
+		})
+	</script>
+	<script>
+		//jsonp方式跨域访问
+		$.getJSON('http://1.51.177.70:8888/formTest/jsonpTest.php','username=aaa&pwd=111&callback=?',function(res){
+			console.log(res);
+		})
+	</script>
+	<script>
+		function fun1(abc){
+			console.log(abc);
+		}
+		$.ajax({
+			url:'http://1.51.177.70:8888/formTest/jsonpTest.php',
+			data:'username=aaa&pwd=111',
+			type:'post',
+			dataType:'jsonp',
+			jsonp:'callback',
+			jsonpCallback:'fun1',
+			// success:function(res){
+			// 	console.log(res);
+			// }
+		})
+	</script>
+</body>
+</html>

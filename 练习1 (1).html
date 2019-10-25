@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: #f2f2f2;
+		}
+		header{
+			width:1000px;
+			margin:auto;
+		}
+		header img:first-child{
+			border-right:2px solid #cecece;
+		}
+		table{
+			margin:30px auto 0;
+			background-color: #fff;
+			border:8px solid #e8e8e8;
+			font-size:12px;
+			color:#333;
+		}
+		input[type=text],input[type=password]{
+			width: 90%;
+			height: 28px;
+			background-repeat: no-repeat;
+			background-position: right center;
+			padding:2px 24px 2px 0;
+			box-sizing: border-box;
+		}
+		input[type=text]{
+			background-image: url(user.png);
+		}
+		input[type=password]{
+			background-image: url(pwd.png);
+		}
+		.loginBtn{
+			width: 90%;
+			height: 30px;
+			background-image: url(button.png);
+			background-size:cover;
+			background-position: center;
+			border:none;
+			border-radius: 4px;
+		}
+		.regBtn{
+			height:30px;
+			background-color:#7cbe56;
+			color:#fff;
+			border:none;
+			border-radius: 4px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="jd_logo.png" alt="">
+		<img src="welcome.png" alt="">
+	</header>
+	<form action="">
+		<table>
+			<tr>
+				<td rowspan="7"><img src="jd_show.png" alt=""></td>
+				<td>
+					<label for="">邮箱/用户名/已验证手机</label>
+					<br>
+					<input type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="">密码</label>
+					<br>
+					<input type="password">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox">自动登录
+					<input type="checkbox">安全控件登录
+					<a href="">忘记密码？</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" class="loginBtn">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					使用合作网站账号登录京东：
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">网银钱包</a>
+					<a href="">QQ</a>
+					<a href="">其他</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="免费注册>>" class="regBtn">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

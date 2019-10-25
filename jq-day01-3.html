@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+	<form action="" class="f1">
+		<input type="text">
+		<input type="password">
+		<input type="checkbox" disabled>
+		<input type="radio">
+		<input type="button" disabled>
+	</form>
+	<script>
+		console.log($(".f1 :enabled"));
+		console.log($(".f1 :disabled"));
+	</script>
+	<form action="" class="f2">
+		<input type="checkbox" name="" id="">
+		<input type="checkbox" name="" id="" checked>
+		<input type="checkbox" name="" id="">
+		<input type="radio" name="" id="" checked>
+		<input type="radio" name="" id="">
+		<select name="" id="">
+			<option value="">01</option>
+			<option value="">02</option>
+			<option value="" selected>03</option>
+			<option value="">04</option>
+		</select>
+	</form>
+	<script>
+		console.log($(".f2 :checked"));
+		console.log($(".f2 :selected"));
+	</script>
+	<form action="" class="f3">
+		<input type="text">
+		<input type="password">
+		<input type="file">
+		<input type="radio">
+		<input type="checkbox">
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<select name="" id="">
+			<option value="">01</option>
+			<option value="">02</option>
+			<option value="">03</option>
+			<option value="">04</option>
+			<option value="">05</option>
+		</select>
+		<button type="reset">按钮</button>
+		<fieldset>
+			<legend>标题</legend>
+			<label for="">000</label>
+			<input type="text">
+			<input type="button" value="abc">
+			<input type="submit">
+			<input type="reset">
+		</fieldset>
+	</form>
+	<script>
+		console.log($(".f3 :input"));
+		console.log($(".f3 :text"));
+		console.log($(".f3 :submit"));
+		console.log($(".f3 :button"));
+	</script>
+	<div class="d1">
+		<b>bbb</b>
+		<i>iiii</i>
+	</div>
+	<script>
+		console.log($('.d1').html());
+		$(".d1").html("<s>sss</s>");
+
+	</script>
+	<div class="d2">
+		<b>bbbb</b>
+	</div>
+	<script>
+		console.log($(".d2").text());
+		$(".d2").text("<s>aaaa</s>");
+	</script>
+
+	<input type="text" class="t1" value="aaa">
+	<script>
+		console.log($(".t1").val());
+		$(".t1").val("999");
+	</script>
+	<div class="d3" id="ddd" title="ttttt">----</div>
+	<script>
+		console.log($("#ddd").attr("title"));
+		$("#ddd").attr("title","9999");
+		$("#ddd").removeAttr("class");
+	</script>
+
+	<input type="checkbox" class="chk" >
+	<script>
+		var chk1 = document.querySelector(".chk");
+		chk1.onclick = function(){
+			// console.log(chk1.checked);
+			// console.log(chk1.getAttribute("checked"));
+			// console.log($(".chk").prop('checked'));
+			// console.log($(".chk").attr('checked'));
+			$(".chk").prop("disabled",true);
+		}
+		// chk1.checked = false;
+		$(".chk").prop('checked',true);
+		$(".chk").attr('checked','');
+		$(".chk").removeAttr("checked");
+	</script>
+	<input type="text" autofocus>
+</body>
+</html>

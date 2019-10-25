@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		document.cookie = "uname=abc";
+		document.cookie = "pwd=456";
+
+		console.log(document.cookie);
+	</script>
+	<script>
+		var flag = true;
+		var d1 = new Date();
+		d1.setTime(d1.getTime()+60000);
+		console.log(new Date());
+		console.log(d1.toUTCString());
+		// document.cookie = "abc=111;expires="+d1.toUTCString();
+	</script>
+	<script>
+				function getServerDate(){
+				    var xhr = null;
+				    if(window.XMLHttpRequest){
+				      xhr = new XMLHttpRequest();
+				    }else{ // ie
+				      xhr = new ActiveObject("Microsoft")
+				    }
+
+				    xhr.open("GET","/",false)//false不可变，必须是同步
+				    xhr.send(null);
+				    var date = xhr.getResponseHeader("Date");
+				    return new Date(date);
+				}
+		//写cookies 
+				function setCookie(name,value,time)
+				{ 
+				    var strsec = getsec(time); 
+				    var exp = getServerDate(); 
+				    exp.setTime(exp.getTime() + strsec*1); 
+				    document.cookie = name + "="+ encodeURIComponent (value) + ";expires=" + exp.toUTCString(); 
+				} 
+				function getsec(str)
+				{ 
+				   //alert(str); 
+				   var str1=str.slice(1,str.length)*1; 
+				   var str2=str.slice(0,1); 
+				   if (str2=="s")
+				   { 
+				        return str1*1000; 
+				   }
+				   else if (str2=="h")
+				   { 
+				       return str1*60*60*1000; 
+				   }
+				   else if (str2=="d")
+				   { 
+				       return str1*24*60*60*1000; 
+				   } 
+				} 
+				//这是有设定过期时间的使用示例： 
+				//s20是代表20秒 
+				//h是指小时，如12小时则是：h12 
+				//d是天数，30天则：d30 
+
+				// setCookie("name","abc","s20");
+
+			//读取cookies 
+				function getCookie(name) 
+				{ 
+				    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+				 
+				    if(arr=document.cookie.match(reg))
+				 
+				        return decodeURIComponent(arr[2]); 
+				    else 
+				        return null; 
+				} 
+
+			//删除cookies 
+				function delCookie(name) 
+				{ 
+				    var exp = new Date(); 
+				    exp.setTime(exp.getTime() - 1); 
+				    var cval=getCookie(name); 
+				    if(cval!=null) 
+				        document.cookie= name + "="+cval+";expires="+exp.toUTCString(); 
+				} 
+	</script>
+</body>
+</html>

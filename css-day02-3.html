@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li::before{
+			content:"^^^";
+		}
+		ul li::after{
+			content:"+++";
+		}
+		ul ::selection{
+			color:red;
+			background-color: purple;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div>ABCDE</div>
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+	</ul>
+	
+	<style>
+		#dd{
+			color:pink;
+		}
+		.d1{
+			color:green;
+		}
+		div{
+			color:red !important;
+		}
+		*{
+			color:blue;
+		}
+
+	</style>
+	<div class="d1" id="dd">ABC</div> -->
+
+	<style>
+		i{/*1*/
+			color:red;
+		}
+		#i1{/*100*/
+			color:blue;
+		}
+		/*100+10+100=210*/
+		/*#p1 .b1 #i1{
+			color:silver;
+		}*/
+		p b #i1,.p1{/*1+1+100=102*/
+			color:orange;
+		}
+		#p1 b i{/*100+1+1=102*/
+			color:green;
+		}
+		.p2 .b1 i{/*10+10+1=21*/
+			color:purple;
+		}
+	</style>
+	
+	<div class="p1">P1</div>
+	<p class="p2" id="p1">
+		pppppp
+		<b class="b1">
+			bbbbb
+			<i id="i1">iiiii</i>
+		</b>
+	</p>
+</body>
+</html>

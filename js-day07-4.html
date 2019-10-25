@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Animal(n){
+			this.name = n;
+		}
+		function Dog(color){
+			this.color = color;
+		}
+		var d1 = new Dog("red");
+		var d2 = new Dog("green");
+		console.log(d1,d2);
+
+		var a1 = new Animal("狗");
+		Dog.prototype = a1;
+
+		var d3 = new Dog("blue");
+		console.log(d1,d2,d3);
+
+		Animal.prototype.run = function(){
+			console.log("跑");
+		}
+		d3.run();
+	</script>
+	<script>
+		function Flower(color){
+			this.color = color;
+		}
+		function Plant(height){
+			this.h = height;
+		}
+       
+		var f1 = new Flower("red");
+		var f2 = new Flower("green");
+
+		Object.setPrototypeOf(f2,new Plant(1.2));
+		console.log(f1,f2);
+		f2.__proto__.height=1.2;
+		console.log(f2.height);
+	</script>
+</body>
+</html>

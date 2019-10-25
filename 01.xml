@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<china>
+	<beijing>
+		<dongcheng>东城</dongcheng>
+		<xicheng>西城</xicheng>
+		<chaoyang qunzhong="lihai">朝阳</chaoyang>
+	</beijing>
+	<tianjin>
+		<xiqing>西青</xiqing>
+		<jixian>蓟县</jixian>
+	</tianjin>
+	<hebei>
+		<shijiazhuang>石家庄</shijiazhuang>
+		<tangshan>唐山</tangshan>
+		<qinhuangdao>秦皇岛</qinhuangdao>
+	</hebei>
+	<shandong>
+		<jinan>济南</jinan>
+		<qingdao>青岛</qingdao>
+		<zibo>淄博</zibo>
+	</shandong>
+</china>

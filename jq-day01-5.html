@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div id="box">
+		<s>ss</s>
+	</div>
+	<script>
+		var p1 = $("<p class='ppp'>ppppp<b>bbbb</b></p>");
+		console.log(p1);
+		$("#box").append(p1);
+		var p2 = $("<p>p2</p>");
+		$("#box").prepend(p2);
+		console.log($("#box").children());
+
+		var p3 = $("<p>p3</p>");
+		$("#box s").after(p3);
+
+		$("#box s").remove();
+	</script>
+	<div class="d1">111</div>
+	<div class="d1 d2">222</div>
+	<div class="d1">333</div>
+	<div class="d1">444</div>
+	<script>
+		$(".d1").remove('.d2');
+	</script>
+	<div id="box1">
+		<p>pp
+			<i>ii</i>
+		</p>
+		<b>bb</b>
+		<a href="">aa</a>
+	</div>
+	<script>
+		// $("#box1").empty();
+		$("#box1").html("");
+	</script>
+	<div id="box2">
+		<b>b1</b>
+		<s>s1</s>
+		<b>b2</b>
+		<i>i1</i>
+		<s>s2</s>
+	</div>
+	<script>
+		var u1 = $("<u>uuuuuu</u>");
+		// $("#box2 b").replaceWith(u1);
+		u1.replaceAll($("#box2 b"));
+	</script>
+	<div id="box3">
+		<p>pppppp</p>
+	</div>
+	
+	<script>
+		var bbb = $("<b>bbbbb</b>");
+		$("#box3").append(bbb);
+		$("#box3").prepend(bbb.clone());
+	</script>
+	<div id="box4">
+		<input type="button" value="按钮" class="btn">
+	</div>
+	<script>
+		$("#box4 .btn").click(function(){
+			console.log("aaaaa");
+		})
+		$("#box4").append($("#box4 .btn").clone(true));
+		var x = 1;
+		$("#box4").append("<p>ppppp"+x+"</p>");
+	</script>
+	<div id="box5"></div>
+	<div id="box6"></div>
+	<script>
+		$("#box5,#box6").append("<b>sss</b>");
+	</script>
+</body>
+</html>

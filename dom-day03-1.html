@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="d1">
+		<a href="">aaa</a>
+	</div>
+	<script>
+		var d1 = document.all.d1;
+		// d1.innerHTML += "<p>pppp</p>";
+		d1.innerHTML = "<p>ooooo</p>" + d1.innerHTML;
+	</script>
+	
+	<select name="" id="s1" onchange="fun(this)">
+		<option value="">0001</option>
+		<option value="">0002</option>
+		<option value="" selected>0003</option>
+		<option value="">0004</option>
+		<option value="">0005</option>
+	</select>
+	<script>
+		var s1 = document.all.s1;
+		console.log(s1.options);
+		console.log(s1.selectedIndex);
+		// s1.size = 3;
+
+		var o1 = new Option("0006","00");
+		s1.add(o1);
+
+		s1.remove(3);
+
+		function fun(ele){
+			console.log(ele.selectedIndex);
+		}
+
+		var oo = s1.lastElementChild;
+		console.log(oo.index);
+		console.log(oo.text);
+		console.log(oo.value);
+		console.log(oo.selected);
+		oo.selected = true;
+	</script>
+	<select name="" id="s2" onchange="fun1(this)">
+		<option value="">0001</option>
+		<option value="">0002</option>
+		<option value="">0003</option>
+		<option value="">0004</option>
+		<option value="">0005</option>
+		<option value="">0006</option>
+		<option value="">0007</option>
+		<option value="">0008</option>
+	</select>
+	<select name="" id="s3" onchange="fun1(this)">
+		<option value="">01</option>
+		<option value="">02</option>
+		<option value="">03</option>
+		<option value="">04</option>
+		<option value="">05</option>
+	</select>
+	<script>
+		function fun1(ele){
+			var index = ele.selectedIndex;
+			// console.log(index);
+			console.log(ele.options[index].text);
+		}
+	</script>
+	<form>
+		<span>SSSSS</span>
+		<input type="text">
+		<input type="password">
+		<input type="button" value="按钮">
+	</form>
+	<form>
+		<input type="radio">
+		<input type="checkbox">
+	</form>
+	<script>
+		var forms = document.forms;
+		console.log(forms);
+		forms[0].action="http://www.baidu.com/";
+		console.log(forms[0].length);
+	</script>
+	<form action="" id="f1">
+		<input type="text">
+		<br>
+		<input type="password">
+		<br>
+		<input type="submit">
+		<input type="reset">
+		<input type="button" value="提交按钮" onclick="submitBtn()">
+		<input type="button" value="重置按钮" onclick="resetBtn()">
+	</form>
+	<script>
+		var f1 = document.all.f1;
+		var num = 0;
+		function submitBtn(){
+			if(num > 2){
+				f1.submit();
+			}
+			num++;
+		}
+		function resetBtn(){
+			console.log("1111")
+			f1.reset();
+		}
+	</script>
+</body>
+</html>

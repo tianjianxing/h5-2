@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css选择器练习</title>
+	<style>
+		.c1{
+			color: red;
+		}
+		nav a{
+			color: blue;
+		}
+		#i1{
+			border: 2px solid orange;
+		}
+		h2{
+			border: 2px solid silver;
+		}
+		div b{
+			color: brown;
+		}
+		div i{
+			color: orange;border: 1px solid green;
+		}
+		#i2{
+			background-color: yellow;
+		}
+		li{
+			border: 1px solid blue;
+		}
+		#i3{
+			background-color:orange;
+		}
+		.c6 a{
+			color: green;
+		}
+		span{
+			color: red;
+		}
+		#i7{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body><!-- 注：根据需要自行设置id或class属性 -->
+	<header>
+		<div class="c1">LOGO</div><!-- LOGO设置：color:red; -->
+		<nav><!-- nav中所有a元素设置：color:blue; -->
+			<a href="">首页</a>
+			<a href="">商品</a>
+			<a id="i1" href="">收藏</a><!-- 该项单独设置：border:2px solid orange; -->
+			<a href="">联系</a>
+			<a href="">关于</a>
+		</nav>
+	</header>
+	<section><!-- 所有h2元素设置：border:2px solid silver;所有“商品名”设置为：color:brown;所有“100.00”设置为：color:orange;border:1px solid green; -->
+		<div>
+			<h2>第一部分</h2>
+			<p>第一部分的描述</p>
+			<div>
+				<b>商品名</b>
+				<i>100.00</i>
+			</div>
+		</div>
+		<div>
+			<h2>第二部分</h2>
+			<p>第二部分的描述</p>
+			<div>
+				<b>商品名</b>
+				<i id="i2">100.00</i><!-- 该元素单独设置：background-color:yellow; -->
+			</div>
+		</div>
+		<div>
+			<h2>第三部分</h2>
+			<p>第三部分的描述</p>
+			<div>
+				<b>商品名</b>
+				<i>100.00</i>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<ul><!-- 所有li设置：border:1px solid blue; -->
+			<li>导航1</li>
+			<li>导航2</li>
+			<li>导航3</li>
+			<li id="i3">导航4</li><!-- 该元素单独设置：background-color:orange; -->
+			<li>导航5</li>
+		</ul>
+		<div class="c6"><!-- 该div下所有a元素设置：color:green; -->
+			<span>友情链接：</span><!-- 该项设置：color:red; -->
+			<a href="">xx网</a> | 
+			<a href="">xx网</a> | 
+			<a id="i7" href="">xx网</a> | <!-- 该a元素单独设置：background-color:blue; -->
+			<a href="">xx网</a> | 
+			<a href="">xx网</a>
+		</div>
+	</footer>
+</body>
+</html>

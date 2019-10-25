@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			border:2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<canvas class="c1" width="600px" height="400px"></canvas>
+	<script>
+		var c1 = document.querySelector(".c1");
+		var ctx1 = c1.getContext('2d');
+
+		ctx1.lineWidth = 10;
+		// ctx1.lineCap = "square";
+
+
+		ctx1.beginPath();
+		ctx1.arc(200,200,100,0,1.5*Math.PI,true);
+		ctx1.stroke();
+
+		ctx1.beginPath();
+		ctx1.moveTo(50,50);
+		ctx1.lineTo(150,50);
+		ctx1.stroke();
+
+		ctx1.lineJoin = "bevel";
+
+		ctx1.beginPath();
+		ctx1.moveTo(500,200);
+		ctx1.lineTo(550,50);
+		ctx1.lineTo(600,200);
+		ctx1.stroke();
+	</script>
+	<style>
+		.btn{
+			width: 300px;
+			height: 40px;
+			background-color: #00f;
+			position: relative;
+		}
+		.btn canvas{
+			border:none;
+			position: absolute;
+			bottom:30px;
+			display:none;
+		}
+
+	</style>
+	<div class="btn">
+		<canvas class="c2" width="300px" height="200px"></canvas>
+	</div>
+	<script>
+		var c2 = document.querySelector('.c2');
+		var ctx2 = c2.getContext('2d');
+
+		ctx2.shadowColor = "#333";
+		ctx2.shadowOffsetX = 0;
+		ctx2.shadowOffsetY = 0;
+		ctx2.shadowBlur = 10;
+
+		ctx2.fillStyle = "white";
+		ctx2.lineWidth = 5;
+		ctx2.lineJoin = "round";
+		ctx2.beginPath();
+		ctx2.moveTo(30,10);
+		ctx2.lineTo(270,10);
+		ctx2.arc(270,30,20,1.5*Math.PI,0);
+		ctx2.lineTo(290,140);
+		ctx2.arc(270,140,20,0,0.5*Math.PI);
+		ctx2.lineTo(160,160);
+		ctx2.lineTo(130,190);
+		ctx2.lineTo(140,160);
+		ctx2.lineTo(30,160);
+		ctx2.arc(30,140,20,0.5*Math.PI,Math.PI);
+		ctx2.lineTo(10,30);
+		ctx2.arc(30,30,20,Math.PI,1.5*Math.PI);
+
+		ctx2.fill();
+
+		var btn = document.querySelector('.btn');
+		btn.onmouseover = function(){
+			c2.style.display="inline-block";
+		}
+		btn.onmouseout = function(){
+			c2.style.display="none";
+		}
+	</script>
+</body>
+</html>

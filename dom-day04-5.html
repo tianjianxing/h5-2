@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.d1{
+			width: 400px;
+			height: 400px;
+			background-color: #f00;
+		}
+		.d2{
+			width: 300px;
+			height: 300px;
+			background-color: #0f0;
+		}
+		.d3{
+			width: 200px;
+			height: 200px;
+			background-color: #00f;
+		}
+	</style>
+</head>
+<body>
+	<div class="d1">
+		<div class="d2">
+			<div class="d3"></div>
+		</div>
+	</div>
+	<script>
+		var d1 = document.querySelector('.d1');
+		var d2 = document.querySelector('.d2');
+		var d3 = document.querySelector('.d3');
+
+		d1.addEventListener('click',function(){
+			console.log("d1");
+		},false)
+		d2.addEventListener('click',function(){
+			console.log("d2");
+		},false)
+		d3.addEventListener('click',function(){
+			console.log("d3");
+		},false)
+	</script>
+
+	<div id="box">
+		<input type="button" value="按钮1">
+		<input type="button" value="按钮2">
+		<input type="button" value="按钮3">
+		<input type="button" value="按钮4">
+		<input type="button" value="按钮5">
+		<input type="button" value="按钮6">
+		<input type="button" value="按钮7">
+		<input type="button" value="按钮8">
+		<input type="button" value="按钮9">
+		<input type="button" value="按钮10">
+		<input type="button" value="按钮11">
+		<input type="button" value="按钮12">
+		<input type="button" value="按钮13">
+		<input type="button" value="按钮14">
+		<input type="button" value="按钮15">
+		<input type="button" value="按钮16">
+		<input type="button" value="按钮17">
+		<input type="button" value="按钮18">
+		<input type="button" value="按钮19">
+		<input type="button" value="按钮20">
+	</div>
+	<script>
+		var box = document.all.box;
+		box.onclick = function(){
+			if(event.srcElement.nodeName == "INPUT"){
+				console.log(event.srcElement);//事件源对象
+			}
+			
+		}
+	</script>
+</body>
+</html>

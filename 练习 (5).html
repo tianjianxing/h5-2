@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script>
+		var code = "0a4C";
+		do{
+			var inputCode = prompt("请输入验证码："+code);
+		}while(code.toLowerCase() != inputCode.toLowerCase())
+		console.log("正确");
+	</script> -->
+	<script>
+		var email = "123456@qq.com";
+		// var userName = email.split("@")[0];
+		// var domain = email.split("@")[1];
+		// console.log(userName,domain);
+
+		// var index = email.search("@");
+		// var userName = email.slice(0,index);
+		// var domain = email.slice(index+1);
+		// console.log(userName,domain);
+	</script>
+	<!-- <script>
+		var userId = "13092219990928931X";
+		var birthday = userId.slice(6,14);
+		var sex = userId.slice(16,17);
+		if(sex % 2 == 0){
+			console.log("女");
+		}else{
+			console.log("男");
+		}
+		console.log(birthday);
+	</script> -->
+	<script>
+		var str = "abcacabdeabf";
+		// while(str.search("ab") != -1){
+		// 	str = str.replace("ab","AB");
+		// }
+		// console.log(str);
+
+		// do{
+		// 	var s = str;
+		// 	str = str.replace("ab","AB");
+		// }while(s != str)
+	</script>
+	<!-- <script>
+		var names = ["a","b","c","d"];
+		var randomNum = parseInt(Math.random()*names.length);
+		console.log(names[randomNum]);
+	</script> -->
+	<script>
+		var classOver = new Date(2019,6,17,21,0,0);
+		var now = new Date();
+		var t = classOver.getTime() - now.getTime();
+		var h = parseInt(t / 1000 / 60 / 60 % 24);
+		var m = parseInt(t / 1000 / 60 % 60);
+		var s = parseInt(t / 1000 % 60);
+		console.log(h,m,s);
+	</script>
+</body>
+</html>

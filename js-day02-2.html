@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		for(var i = 0;i < 10;i++){
+			console.log(i);
+		}
+
+		//找出1-100以内能同时被3和5整除的数
+		for(var j = 1;j < 100;j++){
+			if(j % 3 == 0 && j % 5 == 0){
+				console.log(j);
+			}
+		}
+
+
+	</script>
+	<script>
+		for(var i = 1;i < 5;i++){
+			for(var j = 1;j < 5;j++){
+				console.log(i,j);
+			}
+		}
+
+		for(var m = 1;m <= 4;m++){
+			for(var n = 1;n <= 5;n++){
+				document.write("*");
+			}
+			document.write("<br>");
+		}
+	</script>
+	<script>
+		// var num = prompt("输入数字，以!结束");
+		// for(;num != "!";){
+		// 	if(parseInt(num) % 5 == 0){
+		// 		console.log(num);
+		// 	}
+		// 	num = prompt("输入数字，以!结束");
+		// }
+	</script>
+	<script>
+		for(var i = 0,j = 1;i < 5,j < 8;i++,j+=2){
+			console.log(i,j);
+		}
+	</script>
+	<script>
+		//计算1-100的和，当和大于3000的时候跳出循环
+		var sum = 0;
+		for(var i = 1;i <= 100; i++){
+			if(sum > 3000){
+				break;
+			}
+			sum += i;	
+		}
+		console.log(sum);
+	</script>
+	<script>
+		//输出1-50之间的数，但不输出7的倍数
+		for(var x = 1;x <= 50;x++){
+			if(x % 7 == 0){
+				continue;
+			}
+			console.log(x);
+		}
+	</script>
+</body>
+</html>

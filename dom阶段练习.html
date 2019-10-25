@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="logo">LOGO</div>
+			<h1>我的留言板</h1>
+			<ul>
+				<li><a href="">主页</a></li>
+				<li><a href="">个人简介</a></li>
+				<li><a href="" class="active">留言</a></li>
+				<li><a href="">联系我</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<h2>本次话题：</h2>
+		<div class = "topic">
+			<h4></h4>
+			<input type="text" id="topicTxt">
+			<input type="button" value="确定" id="topicBtn">
+		</div>
+		<article>暂时没有留言……</article>
+		<div class="artFoot">
+			<div class="msgCount">共有 <span>0</span> 条留言</div>
+			<div class="removeAll">
+				<input type="button" value="删除所有留言" id="removeAll">
+			</div>
+		</div>
+		<form class="editArea">
+			<fieldset>
+				<legend>我要留言</legend>
+				<textarea placeholder="请输入留言内容"></textarea>
+				<label for="uName">留言者姓名：<input type="text" placeholder="请输入姓名" id="uName"></label>
+				<div class="charCount">已输入 <span>0</span> 字符</div>
+				<div class="sub"><input type="button" value="发布留言"></div>
+			</fieldset>
+		</form>
+	</section>
+	<script src="index.js"></script>
+</body>
+</html>

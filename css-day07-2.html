@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		p{
+			border:1px solid red;
+			column-count:4;
+			column-gap:30px;
+			/*column-width:200px;*/
+			word-wrap:break-word;
+		}
+	</style>
+	<p>
+			float:left/right;
+			3)浮动塌陷
+			当一个父元素中出现浮动的子元素时，由于浮动框不占空间，会对父元素的高造成影响，也会对父元素的兄弟元素造成覆盖
+			浮动塌陷的解决方式
+			-overflow:hidden;
+			-clear属性，该属性用于清除浮动带来的影响，可取值为none/left/right/both，用来定义元素的哪边不允许出现浮动元素
+			只对块级元素起作用
+		5、定位的属性
+			position:relative(相对定位)/absolute(绝对定位)/fixed(固定定位)/static(默认值)
+			1)相对定位：
+			position:relative;
+			元素仍保持其原有形状，元素定位前所占的位置仍保留，元素框会相对于其原来的位置偏移到某个距离
+			使用定位，除了要position属性外，还需要top、bottom、left、right，取值为尺寸单位。注意top和bottom、left和right的冲突关系;
+			相对定位，参照对象是自己原来的位置，比如left:10px; 元素会向右移动10个像素
+			2)绝对定位
+			将元素从普通文档流中完全移除，不占空间，使用偏移属性来固定元素的位置，绝对定位参照是最近的拥有position属性的祖先元素；如果元素的所有祖先元素均未设置position属性，那么他的位置会相对于它最初的包含框body
+			语法：
+			position:absolute;
+			left/right/top/bottom进行偏移量的设置
+			3)固定定位
+			将元素固定页面的某个位置，元素从普通流中移除，不占空间，当用户滑动页面时，元素框不会跟着移动
+			语法：
+			position:fixed;
+			left/right/top/bottom设置偏移位置
+		6、堆叠顺序
+			一旦修改了元素的定位方式，则元素可能会发生堆叠，可以使用z-index属性来控制元素框的堆叠顺序
+			语法：
+			z-index:取值为整数，也可以为负数
+			取值越大表示其离用户最近，也就是最容易被看到，如果设置为负值，则表示离用户更远
+			注意此属性需要在被定位的元素中使用
+
+		第八部分
+		   
+		1、多列
+			1）分割列
+			将元素分割成多列显示内容
+			语法：column-count：正整数;
+			2）设置列间隔
+			column-gap:尺寸属性;
+			设置列之间的间隔
+	</p>
+
+	<!-- <style>
+		ul{
+			padding:0;
+			list-style-type: none;
+		}
+		li{
+			box-sizing: border-box;
+			width: 25%;
+			border:1px solid red;
+			float:left;
+		}
+	</style>
+	<ul>
+		<li>00001</li>
+		<li>00002</li>
+		<li>00003</li>
+		<li>00004</li>
+		<li>00005</li>
+		<li>00006</li>
+		<li>00007</li>
+		<li>00008</li>
+		<li>00009</li>
+		<li>00010</li>
+		<li>00011</li>
+		<li>00012</li>
+	</ul> -->
+
+	<style>
+		ul{
+			padding:0;
+			list-style-type: none;
+			column-count:4;
+		}
+		li{
+			border:1px solid red;
+		}
+	</style>
+	<ul>
+		<li>00001</li>
+		<li>00002</li>
+		<li>00003</li>
+		<li>00004</li>
+		<li>00005</li>
+		<li>00006</li>
+		<li>00007</li>
+		<li>00008</li>
+		<li>00009</li>
+		<li>00010</li>
+		<li>00011</li>
+		<li>00012</li>
+	</ul>
+</body>
+</html>

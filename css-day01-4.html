@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.d1 span,.d2 p i,.d2 span b{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div class="d1">
+		<p>
+			abcde
+			<b>bbbbbbb</b>
+		</p>
+		<span>
+			spanspan
+		</span>
+	</div>
+	<div class="d2">
+		<div>
+			<p>
+				<i>IIIIII</i>
+				<b>b1b1b1</b>
+			</p>
+			<span>
+				<b>b2b2b2</b>
+				<i>i2i2i2</i>
+			</span>
+		</div>
+	</div>
+
+	<style>
+		/*.d3 .p1 b + i{
+			color:red;
+		}*/
+		.d3 .p1 .b2 ~ i{
+			color:red;
+		}
+	</style>
+	<div class="d3">
+		<p class="p1">
+			<b>bbbbbbb</b>
+			<i>iiiiiii</i>
+			<i>i00i00i0</i>
+			<b class="b2"> b2b2</b>
+			<i>i2i2i2i</i>
+			<i>i2i2i2i</i>
+			<i>i2i2i2i</i>
+			<i>i2i2i2i</i>
+			<span>sfafdaf <i>99999</i></span>
+			<i>i2i2i2i</i>
+		</p>
+		
+	</div>
+</body>
+</html>

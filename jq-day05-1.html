@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.min.css">
+	<script src="./jquery-3.4.1.js"></script>
+	<script src="./jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	<script src="./datepicker-zh-cn.js"></script>
+	<style>
+		/*.ui-datepicker .ui-datepicker-title{
+			text-align: right;
+		}*/
+	</style>
+</head>
+<body>
+	<input type="text" class="dp">
+	<script>
+		$(".dp").datepicker({
+			showAnim:"clip",
+			showOtherMonths:true,
+			selectOtherMonths:true,
+			showButtonPanel:true,
+			onSelect:function(date){
+				console.log(date);
+			},
+			changeMonth:true,
+			changeYear:true,
+			numberOfMonths:3
+		});
+		$("#ui-datepicker-div").css("height","500px");
+		$(".dp").datepicker("option","dateFormat","yy年mm月dd日");
+	</script>
+</body>
+</html>

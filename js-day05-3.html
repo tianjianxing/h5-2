@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		console.log(Math.E);
+		console.log(Math.PI);
+
+		console.log(Math.abs(-5));
+
+		console.log(Math.ceil(1.02));
+		console.log(Math.ceil(1.999));
+
+		console.log(Math.floor(1.02));
+		console.log(Math.floor(1.999));
+
+		console.log(Math.round(3.49));
+		console.log(Math.round(3.5));
+
+		console.log(Math.exp(2));
+		console.log(2.718*2.718);
+
+		console.log(Math.pow(2,3));
+
+		console.log(Math.max(3,5,10,99,100,8));
+		console.log(Math.min(3,5,10,99,100,8));
+
+		console.log(Math.sqrt(3));
+
+		console.log(Math.random());
+
+		// 0<=n<20
+		console.log(Math.random()*20);
+
+		// 0<=n<=20的整数
+		console.log(parseInt(Math.random()*21));
+		console.log(Math.floor(Math.random()*21));
+		console.log(Math.round(Math.random()*20));
+
+		// 10<=n<=50的整数
+		console.log(Math.round(Math.random()*40)+10);
+	</script>
+	<script>
+		var d1 = new Date(2019,6,16);
+		console.log(d1);
+		var d2 = new Date(2019,6,16,15,11,30);
+		console.log(d2);
+		var d3 = new Date("2019/7/16");
+		console.log(d3);
+		var d4 = new Date("2019/7/16 15:11:30");
+		console.log(d4);
+		
+		var d5 = new Date();
+		console.log(d5);
+		var d6 = new Date;
+		console.log(typeof(d6));
+		var d7 = Date();
+		console.log(typeof(d7));
+	</script>
+	<script>
+		console.log(d5.getFullYear());
+		console.log(d5.getMonth()+1);
+		console.log(d5.getDate());
+		console.log(d5.getDay());
+		var d8 = new Date("2019/7/14");
+		console.log(d8.getDay());
+
+		console.log(d5.getHours());
+		console.log(d5.getMinutes());
+		console.log(d5.getSeconds());
+
+		console.log(d5.getTime());
+	</script>
+	<script>
+		var d9 = new Date(2019,6,16,18,0,0);
+		var durTime = d9.getTime() - d5.getTime();
+		console.log(durTime);
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.4.1.js"></script>
+	<style>
+		#box{
+			width:200px;
+			height: 200px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="开始" class="startAni">
+	<input type="button" value="停止" class="stopAni">
+	<div id="box"></div>
+	<script>
+		$(".startAni").click(function(){
+			$("#box").animate({"width":"400px"},2000)
+					 .animate({"height":"400px"},2000);
+		})
+		$(".stopAni").click(function(){
+			// $("#box").stop();
+			// $("#box").stop(true);
+			// $("#box").stop(true,true);
+			$("#box").stop(false,true);
+		})
+	</script>
+	<br>
+	<br>
+	<br>
+	<style>
+		#box1{
+			width: 100px;
+			height: 50px;
+			background-color: #f00;
+		}
+	</style>
+	<div id="box1"></div>
+	<script>
+		$("#box1").mouseover(function(){
+			$(this).stop().animate({"height":"200px"},2000);
+		}).mouseout(function(){
+			$(this).stop().animate({"height":"50px"},2000);
+		})
+	</script>
+	<br>
+	<br>
+	<style>
+		#box2{
+			width: 200px;
+			height: 200px;
+			background-color: #00f;
+		}
+	</style>
+	<input type="button" value="开始动画" class="startBtn">
+	<div id="box2"></div>
+	<script>
+		$(".startBtn").click(function(){
+			$("#box2").animate({"width":"400px"},1000)
+					  .delay(1000)
+					  .animate({"height":"300px"},1000);
+		})
+	</script>
+</body>
+</html>
